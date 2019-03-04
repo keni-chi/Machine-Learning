@@ -14,10 +14,9 @@
 	- kaggle
 
 		- Titanic
-		
+
 		- House Price
-		
+
 		- Digit Recognizer
 
-	- 株化予測
-
+	- 株価予測

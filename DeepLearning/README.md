@@ -6,4 +6,5 @@
 
 ## 参考
 [ディープラーニングこれだけは知っておきたい3つのこと](https://jp.mathworks.com/discovery/deep-learning.html)  
-[パーセプトロンとは?](https://qiita.com/nishiy-k/items/1e795f92a99422d4ba7b)
+[パーセプトロンとは?](https://qiita.com/nishiy-k/items/1e795f92a99422d4ba7b)  
+[AIが三国志を読んだら、孔明が知力100、関羽が武力99、を求められるのか？をガチで考える物語（自然言語処理編）](https://qiita.com/youwht/items/92056e63498c36de4e3b)  

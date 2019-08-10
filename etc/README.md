@@ -15,4 +15,4 @@
 [自然言語処理入門編！](https://qiita.com/cr-fun/items/cc82a85c572daac0b5c5)   
 [自然言語処理入門 まとめ【Python + Janome + gensim】](https://qiita.com/kodera123/items/a5921cbcd18b9a309787)  
 [SoftLayer Bluemix Summit 2015: BluemixでWatsonをつかいたおせ！](https://www.slideshare.net/MikiYutani/softlayer-bluemix-summit-2015-bluemixwatson?qid=8fda4f26-b981-4268-8da5-192504fdc4a3&v=&b=&from_search=1)  
-[統計WEB](https://bellcurve.jp/statistics/course/)  
+[統計WEB(統計学の時間)](https://bellcurve.jp/statistics/course/)  

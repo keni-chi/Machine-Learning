@@ -16,3 +16,4 @@
 [自然言語処理入門 まとめ【Python + Janome + gensim】](https://qiita.com/kodera123/items/a5921cbcd18b9a309787)  
 [SoftLayer Bluemix Summit 2015: BluemixでWatsonをつかいたおせ！](https://www.slideshare.net/MikiYutani/softlayer-bluemix-summit-2015-bluemixwatson?qid=8fda4f26-b981-4268-8da5-192504fdc4a3&v=&b=&from_search=1)  
 [統計WEB(統計学の時間)](https://bellcurve.jp/statistics/course/)  
+[これから強化学習を勉強する人のための「強化学習アルゴリズム・マップ」と、実装例まとめ](https://qiita.com/sugulu/items/3c7d6cbe600d455e853b)  

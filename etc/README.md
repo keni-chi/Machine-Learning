@@ -16,6 +16,7 @@ janome
 ### ディープラーニング
 [ディープラーニングこれだけは知っておきたい3つのこと](https://jp.mathworks.com/discovery/deep-learning.html)  
 [パーセプトロンとは?](https://qiita.com/nishiy-k/items/1e795f92a99422d4ba7b)  
+[PyTorchとは？概要と導入方法をチェックしよう！](https://www.sejuku.net/blog/64175)  
 
 ### 強化学習
 [これから強化学習を勉強する人のための「強化学習アルゴリズム・マップ」と、実装例まとめ](https://qiita.com/sugulu/items/3c7d6cbe600d455e853b)  

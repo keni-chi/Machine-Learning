@@ -31,5 +31,5 @@ janome
 [XGBoostの主な特徴と理論の概要](https://qiita.com/yh0sh/items/1df89b12a8dcd15bd5aa)  
 [LightGBM ハンズオン - もう一つのGradient Boostingライブラリ](https://qiita.com/TomokIshii/items/3729c1b9c658cc48b5cb)  
 
-## ライブラリ
+### ライブラリ
 [Dockerを使って機械学習実行環境（勾配ブースティング、ニューラルネット含む）を30分で構築する - python, Mecab, LightGBM, xgboost, TensorFlow, keras, Pytorch, etc](https://www.takapy.work/entry/2019/04/07/134433)  

@@ -6,12 +6,21 @@
 ### Jupyter Notebookでpip
 !pip install xxx
 
-### 形態素解析
-janome
+### Libs
 
+### genism
+- トピックモデリング用ライブラリ
+- 単語の並びなどを忘れて、単純に文書内にそれぞれの単語が何回出現したかという出現回数の情報だけを保持する
 
 
 ## 参考
+
+### ライブラリ
+[Dockerを使って機械学習実行環境（勾配ブースティング、ニューラルネット含む）を30分で構築する - python, Mecab, LightGBM, xgboost, TensorFlow, keras, Pytorch, etc](https://www.takapy.work/entry/2019/04/07/134433)  
+
+### アンサンブル学習
+[XGBoostの主な特徴と理論の概要](https://qiita.com/yh0sh/items/1df89b12a8dcd15bd5aa)  
+[LightGBM ハンズオン - もう一つのGradient Boostingライブラリ](https://qiita.com/TomokIshii/items/3729c1b9c658cc48b5cb)  
 
 ### ディープラーニング
 [ディープラーニングこれだけは知っておきたい3つのこと](https://jp.mathworks.com/discovery/deep-learning.html)  
@@ -27,9 +36,5 @@ janome
 [自然言語処理入門編！](https://qiita.com/cr-fun/items/cc82a85c572daac0b5c5)   
 [自然言語処理入門 まとめ【Python + Janome + gensim】](https://qiita.com/kodera123/items/a5921cbcd18b9a309787)  
 
-### アンサンブル学習
-[XGBoostの主な特徴と理論の概要](https://qiita.com/yh0sh/items/1df89b12a8dcd15bd5aa)  
-[LightGBM ハンズオン - もう一つのGradient Boostingライブラリ](https://qiita.com/TomokIshii/items/3729c1b9c658cc48b5cb)  
-
-### ライブラリ
-[Dockerを使って機械学習実行環境（勾配ブースティング、ニューラルネット含む）を30分で構築する - python, Mecab, LightGBM, xgboost, TensorFlow, keras, Pytorch, etc](https://www.takapy.work/entry/2019/04/07/134433)  
+### 形態素解析
+[形態素解析のライブラリ「Mecab」と「Janome」を使ってみよう](https://ushinji.hatenablog.com/entry/2017/11/23/161031)  

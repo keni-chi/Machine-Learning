@@ -39,3 +39,9 @@
 
 ### 形態素解析
 [形態素解析のライブラリ「Mecab」と「Janome」を使ってみよう](https://ushinji.hatenablog.com/entry/2017/11/23/161031)  
+
+### hdf5
+[h5py の簡単な使い方](https://www.qoosky.io/techs/861b4ae419)  
+
+### Pillow
+[Pythonの画像処理ライブラリPillow(PIL)の使い方](https://note.nkmk.me/python-pillow-basic/)

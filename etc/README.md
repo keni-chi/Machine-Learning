@@ -49,3 +49,6 @@ Janomeはpipコマンドで簡単に導入できる点がメリット。実行�
 
 ### Pillow
 [Pythonの画像処理ライブラリPillow(PIL)の使い方](https://note.nkmk.me/python-pillow-basic/)
+
+### Sympy
+[Sympy+Jupyterで最強の電卓環境を作る](https://qiita.com/pashango2/items/500d23c8f43784b54315)  

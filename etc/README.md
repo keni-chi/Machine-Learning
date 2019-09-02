@@ -41,6 +41,7 @@ Janomeはpipコマンドで簡単に導入できる点がメリット。実行�
 [自然言語処理入門編！](https://qiita.com/cr-fun/items/cc82a85c572daac0b5c5)   
 [自然言語処理入門 まとめ【Python + Janome + gensim】](https://qiita.com/kodera123/items/a5921cbcd18b9a309787)  
 [データ解析: LDAの実装(gensim)](https://openbook4.me/projects/193/sections/1154)  
+[「言語処理のための機械学習入門」"超"まとめ](https://qiita.com/yuyasat/items/66d057b1b91722c85aa3)  
 
 ### 形態素解析
 [形態素解析のライブラリ「Mecab」と「Janome」を使ってみよう](https://ushinji.hatenablog.com/entry/2017/11/23/161031)  

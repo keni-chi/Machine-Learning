@@ -36,6 +36,9 @@ Janomeはpipコマンドで簡単に導入できる点がメリット。実行�
 [これから強化学習を勉強する人のための「強化学習アルゴリズム・マップ」と、実装例まとめ](https://qiita.com/sugulu/items/3c7d6cbe600d455e853b)  
 [ゼロからDeepまで学ぶ強化学習](https://qiita.com/icoxfog417/items/242439ecd1a477ece312)  
 
+### 前処理
+[自然言語処理における前処理の種類とその威力](https://qiita.com/Hironsan/items/2466fe0f344115aff177)  
+
 ### 自然言語処理
 [AIが三国志を読んだら、孔明が知力100、関羽が武力99、を求められるのか？をガチで考える物語（自然言語処理編）](https://qiita.com/youwht/items/92056e63498c36de4e3b) 
 [自然言語処理入門編！](https://qiita.com/cr-fun/items/cc82a85c572daac0b5c5)   

@@ -9,3 +9,4 @@
 [最尤推定量とは？初めての人にもわかる解説](https://to-kei.net/estimator/maximum-likelihood-estimation/)  
 [5分でスッキリ理解するベイズ推定](https://qiita.com/HiromuMasuda0228/items/2dc62cf4f9dbdf373627)  
 [統計初心者でも2分で雰囲気理解できるLME（線形混合）モデル](http://foslave.blogspot.com/2014/12/2lme.html)  
+[Linear Mixed Model （以下、混合モデル）の短い解説](http://www.lowtem.hokudai.ac.jp/plantecol/akihiro/obenkyou/GLMMexample.pdf)  

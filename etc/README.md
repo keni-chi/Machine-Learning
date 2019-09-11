@@ -61,4 +61,8 @@ Janomeはpipコマンドで簡単に導入できる点がメリット。実行�
 ### lgb
 [Light GBMを使うとOMPエラーでカーネルが死ぬ](https://haltaro.github.io/2018/06/22/dead-kernel-lgbm)  
 [【Mac】gccのバージョン確認、新しいバージョン（8.2.0）をインストール](https://qiita.com/aki-takano/items/0152a3ab4a615cfef9bc)  
-[MacbookにLightGBMをインストールする](https://ymegane88.hatenablog.com/entry/2018/12/13/005342)
+[MacbookにLightGBMをインストールする](https://ymegane88.hatenablog.com/entry/2018/12/13/005342)  
+
+### パターン認識
+[はじめてのパターン認識　第１章](https://qiita.com/ssnnkkhh/items/34d024d56479d9c00f09)   
+[はじめてのパターン認識　第2章](https://qiita.com/ssnnkkhh/items/a722b97ee9f9c061c4b7)

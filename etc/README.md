@@ -64,5 +64,7 @@ Janomeはpipコマンドで簡単に導入できる点がメリット。実行�
 [MacbookにLightGBMをインストールする](https://ymegane88.hatenablog.com/entry/2018/12/13/005342)  
 
 ### パターン認識
+[はじめてのパターン認識　目次](https://www.amazon.co.jp/dp/toc/4627849710/ref=dp_toc?_encoding=UTF8&n=489986)  
 [はじめてのパターン認識　第１章](https://qiita.com/ssnnkkhh/items/34d024d56479d9c00f09)   
 [はじめてのパターン認識　第2章](https://qiita.com/ssnnkkhh/items/a722b97ee9f9c061c4b7)
+[はじめてのパターン認識　第3章 ベイズの識別規則 解説](https://qiita.com/icoxfog417/items/c3c8fed9902ad6200069)  

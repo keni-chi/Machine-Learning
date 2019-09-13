@@ -69,3 +69,4 @@ Janomeはpipコマンドで簡単に導入できる点がメリット。実行�
 [はじめてのパターン認識　第2章](https://qiita.com/ssnnkkhh/items/a722b97ee9f9c061c4b7)
 [はじめてのパターン認識　第3章 ベイズの識別規則 解説](https://qiita.com/icoxfog417/items/c3c8fed9902ad6200069)  
 [はじめてのパターン認識 4章 確率モデルと識別関数（前半メモ）](https://qiita.com/golio/items/e0ab914701b9b006edda)  
+[はじめてのパターン認識 第４章 確率モデルと識別関数　前半（観測データの線形変換）](https://qiita.com/sobeit@github/items/7234455c5ef04c8feb5b)  

@@ -36,19 +36,15 @@ Janomeはpipコマンドで簡単に導入できる点がメリット。実行�
 [これから強化学習を勉強する人のための「強化学習アルゴリズム・マップ」と、実装例まとめ](https://qiita.com/sugulu/items/3c7d6cbe600d455e853b)  
 [ゼロからDeepまで学ぶ強化学習](https://qiita.com/icoxfog417/items/242439ecd1a477ece312)  
 
-### 前処理
-[自然言語処理における前処理の種類とその威力](https://qiita.com/Hironsan/items/2466fe0f344115aff177)  
-
 ### 自然言語処理
+[形態素解析のライブラリ「Mecab」と「Janome」を使ってみよう](https://ushinji.hatenablog.com/entry/2017/11/23/161031)  
+[自然言語処理における前処理の種類とその威力](https://qiita.com/Hironsan/items/2466fe0f344115aff177)  
 [AIが三国志を読んだら、孔明が知力100、関羽が武力99、を求められるのか？をガチで考える物語（自然言語処理編）](https://qiita.com/youwht/items/92056e63498c36de4e3b) 
 [自然言語処理入門編！](https://qiita.com/cr-fun/items/cc82a85c572daac0b5c5)   
 [自然言語処理入門 まとめ【Python + Janome + gensim】](https://qiita.com/kodera123/items/a5921cbcd18b9a309787)  
 [データ解析: LDAの実装(gensim)](https://openbook4.me/projects/193/sections/1154)  
 [「言語処理のための機械学習入門」"超"まとめ](https://qiita.com/yuyasat/items/66d057b1b91722c85aa3)  
 [自然言語（日本語）処理](http://www.sist.ac.jp/~kanakubo/research/natural_language_processing.html)  
-
-### 形態素解析
-[形態素解析のライブラリ「Mecab」と「Janome」を使ってみよう](https://ushinji.hatenablog.com/entry/2017/11/23/161031)  
 
 ### hdf5
 [h5py の簡単な使い方](https://www.qoosky.io/techs/861b4ae419)  

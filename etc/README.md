@@ -34,7 +34,7 @@
 
 
 
-### ライブラリ
+### ライブラリ別
 
 #### 概要
 [Dockerを使って機械学習実行環境（勾配ブースティング、ニューラルネット含む）を30分で構築する - python, Mecab, LightGBM, xgboost, TensorFlow, keras, Pytorch, etc](https://www.takapy.work/entry/2019/04/07/134433)  

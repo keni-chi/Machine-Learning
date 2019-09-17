@@ -45,6 +45,7 @@ Janomeはpipコマンドで簡単に導入できる点がメリット。実行�
 [データ解析: LDAの実装(gensim)](https://openbook4.me/projects/193/sections/1154)  
 [「言語処理のための機械学習入門」"超"まとめ](https://qiita.com/yuyasat/items/66d057b1b91722c85aa3)  
 [自然言語（日本語）処理](http://www.sist.ac.jp/~kanakubo/research/natural_language_processing.html)  
+[自然言語処理（NLP）ってなんだろう？](https://qiita.com/MahoTakara/items/b3d719ed1a3665730826)  
 
 ### hdf5
 [h5py の簡単な使い方](https://www.qoosky.io/techs/861b4ae419)  
@@ -59,12 +60,3 @@ Janomeはpipコマンドで簡単に導入できる点がメリット。実行�
 [Light GBMを使うとOMPエラーでカーネルが死ぬ](https://haltaro.github.io/2018/06/22/dead-kernel-lgbm)  
 [【Mac】gccのバージョン確認、新しいバージョン（8.2.0）をインストール](https://qiita.com/aki-takano/items/0152a3ab4a615cfef9bc)  
 [MacbookにLightGBMをインストールする](https://ymegane88.hatenablog.com/entry/2018/12/13/005342)  
-
-### パターン認識
-[はじめてのパターン認識　目次](https://www.amazon.co.jp/dp/toc/4627849710/ref=dp_toc?_encoding=UTF8&n=489986)  
-[はじめてのパターン認識　第１章](https://qiita.com/ssnnkkhh/items/34d024d56479d9c00f09)   
-[はじめてのパターン認識　第2章](https://qiita.com/ssnnkkhh/items/a722b97ee9f9c061c4b7)
-[はじめてのパターン認識　第3章 ベイズの識別規則 解説](https://qiita.com/icoxfog417/items/c3c8fed9902ad6200069)  
-[はじめてのパターン認識 4章 確率モデルと識別関数（前半メモ）](https://qiita.com/golio/items/e0ab914701b9b006edda)  
-[はじめてのパターン認識 第４章 確率モデルと識別関数　前半（観測データの線形変換）](https://qiita.com/sobeit@github/items/7234455c5ef04c8feb5b)  
-[はじめてのパターン認識 第7章 パーセプトロン型学習規則](https://qiita.com/icoxfog417/items/e574a9d61f9f680d578b)  

@@ -31,7 +31,7 @@
 [「言語処理のための機械学習入門」"超"まとめ](https://qiita.com/yuyasat/items/66d057b1b91722c85aa3)  
 [自然言語（日本語）処理](http://www.sist.ac.jp/~kanakubo/research/natural_language_processing.html)  
 [自然言語処理（NLP）ってなんだろう？](https://qiita.com/MahoTakara/items/b3d719ed1a3665730826)  
-
+[AIはハチ=米津玄師を見破れるか ? -J-popアーティストの歌詞を分析してみた-](https://qiita.com/kazuya-n/items/0a2fe586716c925055d1)
 
 
 ### ライブラリ別

@@ -23,3 +23,6 @@
 
 ### データ解析のための統計モデリング入門
 [Pythonで実装しながら緑本を学ぶ (第2章 確率分布と統計モデルの最尤推定)](https://ohke.hateblo.jp/entry/2018/01/19/230000)  
+
+### カーネル主成分分析
+[カーネル主成分分析とは](https://qiita.com/NoriakiOshita/items/138c10eada03938fcd79)

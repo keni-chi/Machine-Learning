@@ -20,6 +20,7 @@
 #### 強化学習
 [これから強化学習を勉強する人のための「強化学習アルゴリズム・マップ」と、実装例まとめ](https://qiita.com/sugulu/items/3c7d6cbe600d455e853b)  
 [ゼロからDeepまで学ぶ強化学習](https://qiita.com/icoxfog417/items/242439ecd1a477ece312)  
+[CartPoleでQ学習（Q-learning）を実装・解説【Phythonで強化学習：第1回】](http://neuro-educator.com/rl1/)  
 
 #### 自然言語処理
 [形態素解析のライブラリ「Mecab」と「Janome」を使ってみよう](https://ushinji.hatenablog.com/entry/2017/11/23/161031)  

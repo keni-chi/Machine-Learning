@@ -26,3 +26,6 @@
 
 ### カーネル主成分分析
 [カーネル主成分分析とは](https://qiita.com/NoriakiOshita/items/138c10eada03938fcd79)
+
+### 統計学
+[Pythonでt検定　2クラスの試験成績の比較](https://qiita.com/code0327/items/a96dd2fbd8a491d2eeaa)

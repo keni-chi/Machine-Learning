@@ -37,7 +37,6 @@ def plt_multi(xa, xb):
     ax1.set_xlim(55, 100)
     ax1.set_ylim(0, 15)
     ax1.hist(xa,bins=9,range=(55,100),color='r')
-    
     ax2 = fig.add_subplot(212) 
     ax2.set_xlim(55, 100)
     ax2.set_ylim(0, 15)

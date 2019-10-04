@@ -29,3 +29,6 @@
 
 ### 統計学
 [Pythonでt検定　2クラスの試験成績の比較](https://qiita.com/code0327/items/a96dd2fbd8a491d2eeaa)
+
+### ベイズ
+[ベイズの定理とナイーブベイズ分類](https://hackmd.io/@fqZLfJuuS9O3vKeuZyZEfw/SkygLNZ-f?type=view)

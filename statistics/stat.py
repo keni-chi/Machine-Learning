@@ -86,9 +86,9 @@ def test_ave_diff(xa, xb):
     DF = len(xa)+len(xb)-2
     CI1,CI2 = st.t.interval( alpha=0.95, loc=MU, scale=SE, df=DF )
     if p >= 0.05:
-        print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を採択して、2つの標本の平均値に有意差あり')
+        print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を採択して、2つの標本の平均値に有意差なし')
     else:
-        print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を棄却して、2つの標本の平均値に有意差なし')
+        print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を棄却して、2つの標本の平均値に有意差あり')
     print(f't値 = {t:.2f}')
     print(f'平均値の差   = {MU:.2f}')
     print(f'差の標準誤差 = {SE:.2f}')
@@ -103,6 +103,47 @@ def create_std_data():
     xa = pd.Series(a).hist()
     plt.show(xa)
     print('データ生成-------------------end')
+
+
+def binom():
+    print('母比率pの95%信頼区間-------------------start')
+    alpha=0.95 # 信頼区間
+    n=200      # 試行回数
+    p=7/200    # 標本比率(成功回数を試行回数で割ったもの)
+    bottom, up = st.binom.interval(alpha=alpha, n=n, p=p, loc=0)
+    print('母比率pの95%信頼区間: {:.2f} < p < {:.2f}'.format(bottom/n, up/n))
+    print('母比率pの95%信頼区間-------------------end')
+
+
+def chi2_contingency():
+    print('独立性の検定-------------------start')
+    # 独立性の検定
+    #       発ガン人数	非発ガン人数
+    # 喫煙群	     30	          70
+    # 非喫煙群	    20	         80
+    p = st.chi2_contingency(np.array([[30,70],[20,80]]))[1]
+    if p >= 0.05:
+        print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を採択して、喫煙と発ガンの2つの変数は独立していないと結論付けられない。')
+    else:
+        print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を棄却して、喫煙と発ガンの2つの変数は独立していないと結論付けられる。')
+    print('独立性の検定-------------------end')
+
+
+def chisquare():
+    print('適合度の検定-------------------start')
+    # 対立仮説：得られたデータは理論上の分布に適合しない。
+    # p = st.chisquare([8, 12, 8, 12, 8, 12], f_exp=[10, 10, 10, 10, 10, 10])
+    p = st.chisquare([9, 10, 10, 10, 10], f_exp=[10, 10, 10, 10, 10])
+    print(p)
+    print('適合しているほど、P値は1に近く。尚、[0]のstatisticの値は、カイ二乗値を表す。')
+    print('----')
+    p = st.chisquare([8, 12, 8, 12, 8, 12], f_exp=[10, 10, 10, 10, 10, 10])[1]
+    if p >= 0.05:
+        print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を採択して、得られたデータが理論上の分布に適合しないと結論づけられない。')
+    else:
+        print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を棄却して、得られたデータが理論上の分布に適合しないと結論づけられる。')
+
+    print('適合度の検定-------------------end')
 
 
 def main():
@@ -121,6 +162,11 @@ def main():
     test_equal_dispersion(xa, xb)
     test_ave_diff(xa, xb)
     # create_std_data()
+
+    #############################
+    binom()
+    chi2_contingency()
+    chisquare()
 
 
 if __name__ == '__main__':

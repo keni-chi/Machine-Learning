@@ -3,6 +3,26 @@
 ## 概要
 覚書である。順次記載予定。  
 
+### pythonを用いた統計的仮説検定、信頼区間推定方法まとめ
+- 3A. 分散分析(ANOVA)
+- 母平均の信頼区間推定
+- 母分散の信頼区間推定
+- 4B. フリードマン検定(Friedman test)  
+  対立仮説は「少なくとも１つの水準の母集団平均が他の水準の平均とは異なる」
+- 3B. クラスカル・ウォリス検定(Kruskal-Wallis test)  
+  対立仮説は「少なくとも１つの水準の母集団平均が他の水準の平均とは異なる」
+- ルビーン検定(Levene's-test)  
+  対立仮説は「少なくとも１つの水準の母集団分散が他の水準の母集団分散とは異なる」
+- 1B. マン・ホイットニーのU検定(Mann-Whitney-U-test)  
+  対立仮説は「2標本の間に差がある」
+- 1A. 対応ありt検定(Paired-t-test)  
+  対応するデータ間の差について「差の母平均は0である」という帰無仮説を検定する
+- 2A. 対応なしt検定(Unpaired-t-test)  
+  「2群の母集団の平均値(μ1,μ2)が等しい」という帰無仮説を検定
+- 2B. ウィルコクソンの符号付き順位検定(Wilcoxon-Signed-rank-test)  
+  対立仮説は「2標本の間に差がある」
+
+
 ## 参考
 [統計WEB(統計学の時間)](https://bellcurve.jp/statistics/course/)  
 [イカサマコインの例で最尤推定とベイズ推定の違いを理解してみる](https://qiita.com/MoriKen/items/09da26466c00500bcd68#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB)  
@@ -30,6 +50,9 @@
 ### 統計学
 [Pythonでt検定　2クラスの試験成績の比較](https://qiita.com/code0327/items/a96dd2fbd8a491d2eeaa)
 [pythonを用いた統計的仮説検定、信頼区間推定方法まとめ](https://qiita.com/Wotipati/items/4f5e893fa39ad4cb9957)  
+[パラメトリック検定とノンパラメトリック検定の違い](https://www.study-channel.com/2015/06/parametric-nonparametric-test.html)
+[Pythonで母比率の95%信頼区間を区間推定し、妥当なサンプルサイズを決定する方法](https://tanuhack.com/estimate-pop-rate/)  
+[Pythonでカイ二乗検定（適合度検定・独立性の検定）を行う方法 (Pythonによる統計学入門)](https://toukei.link/programmingandsoftware/statistics_by_python/chisqtest_by_python/)  
 
 ### ベイズ
 [ベイズの定理とナイーブベイズ分類](https://hackmd.io/@fqZLfJuuS9O3vKeuZyZEfw/SkygLNZ-f?type=view)

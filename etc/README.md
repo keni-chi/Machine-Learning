@@ -34,7 +34,7 @@
 [自然言語処理（NLP）ってなんだろう？](https://qiita.com/MahoTakara/items/b3d719ed1a3665730826)  
 [AIはハチ=米津玄師を見破れるか ? -J-popアーティストの歌詞を分析してみた-](https://qiita.com/kazuya-n/items/0a2fe586716c925055d1)  
 [Word2Vecを用いた類義語の抽出が上手く行ったので、分析をまとめてみた](https://qiita.com/To_Murakami/items/cc225e7c9cd9c0ab641e)  
-[日本語WordNetを使って、類義語を検索できるツールをpythonで作ってみた](https://qiita.com/pocket_kyoto/items/1e5d464b693a8b44eda5)
+[日本語WordNetを使って、類義語を検索できるツールをpythonで作ってみた](https://qiita.com/pocket_kyoto/items/1e5d464b693a8b44eda5)  
 [自然言語 Wordnet × Pythonで類義語を抽出する](https://www.yoheim.net/blog.php?q=20160201)  
 
 

@@ -29,6 +29,7 @@
 
 ### 統計学
 [Pythonでt検定　2クラスの試験成績の比較](https://qiita.com/code0327/items/a96dd2fbd8a491d2eeaa)
+[pythonを用いた統計的仮説検定、信頼区間推定方法まとめ](https://qiita.com/Wotipati/items/4f5e893fa39ad4cb9957)  
 
 ### ベイズ
 [ベイズの定理とナイーブベイズ分類](https://hackmd.io/@fqZLfJuuS9O3vKeuZyZEfw/SkygLNZ-f?type=view)

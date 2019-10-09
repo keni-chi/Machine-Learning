@@ -8,6 +8,11 @@
 
 ### トピック別
 
+### 前処理
+[最低限知っておくべきデータの前処理](https://qiita.com/kazukiii/items/2600987798c62dd29dfc)  
+[機械学習における欠損値補完について考える](https://rmizutaa.hatenablog.com/entry/2019/06/30/212103)  
+
+
 #### アンサンブル学習
 [XGBoostの主な特徴と理論の概要](https://qiita.com/yh0sh/items/1df89b12a8dcd15bd5aa)  
 [LightGBM ハンズオン - もう一つのGradient Boostingライブラリ](https://qiita.com/TomokIshii/items/3729c1b9c658cc48b5cb)  

@@ -11,6 +11,10 @@
 ### 前処理
 [最低限知っておくべきデータの前処理](https://qiita.com/kazukiii/items/2600987798c62dd29dfc)  
 [機械学習における欠損値補完について考える](https://rmizutaa.hatenablog.com/entry/2019/06/30/212103)  
+[データ分析でよく使う前処理の整理と対処](https://researchmap.jp/?action=cv_download_main&upload_id=149566)  
+[データ分析初心者は「前処理大全」でデータ前処理を学べ](https://nori-life-log.com/%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E5%88%9D%E5%BF%83%E8%80%85%E3%81%AF%E3%80%8C%E5%89%8D%E5%87%A6%E7%90%86%E5%A4%A7%E5%85%A8%E3%80%8D%E3%81%A7%E3%83%87%E3%83%BC%E3%82%BF%E5%89%8D%E5%87%A6)
+[Rで実践！欠損データ分析入門【1】](https://techblog.nhn-techorus.com/archives/6309)
+[欠損値の補完と削除を用いたハイブリッド欠損値処理の提案](https://www.jstage.jst.go.jp/article/jssst/34/4/34_4_144/_pdf)
 
 
 #### アンサンブル学習

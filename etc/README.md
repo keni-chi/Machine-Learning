@@ -45,7 +45,7 @@
 [Word2Vecを用いた類義語の抽出が上手く行ったので、分析をまとめてみた](https://qiita.com/To_Murakami/items/cc225e7c9cd9c0ab641e)  
 [日本語WordNetを使って、類義語を検索できるツールをpythonで作ってみた](https://qiita.com/pocket_kyoto/items/1e5d464b693a8b44eda5)  
 [自然言語 Wordnet × Pythonで類義語を抽出する](https://www.yoheim.net/blog.php?q=20160201)  
-
+[Googleが公開した自然言語処理の最新技術、BERTとは何者なのか](https://ai-scholar.tech/text-mining/bert-ai-93/)  
 
 ### ライブラリ別
 
@@ -75,3 +75,6 @@
 #### Sympy
 - Sympy...代数計算ライブラリ  
 [Sympy+Jupyterで最強の電卓環境を作る](https://qiita.com/pashango2/items/500d23c8f43784b54315)  
+
+### keras
+[Keras チュートリアル](https://qiita.com/sasayabaku/items/64a01363bcd5c44feb0b)

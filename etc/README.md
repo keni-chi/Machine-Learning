@@ -46,6 +46,7 @@
 [日本語WordNetを使って、類義語を検索できるツールをpythonで作ってみた](https://qiita.com/pocket_kyoto/items/1e5d464b693a8b44eda5)  
 [自然言語 Wordnet × Pythonで類義語を抽出する](https://www.yoheim.net/blog.php?q=20160201)  
 [Googleが公開した自然言語処理の最新技術、BERTとは何者なのか](https://ai-scholar.tech/text-mining/bert-ai-93/)  
+[自然言語処理の最新動向ウォッチでよくみるサイト（随時追加）](https://qiita.com/LeftLetter/items/d705bb21e66b87657b28)  
 
 
 ### ライブラリ別

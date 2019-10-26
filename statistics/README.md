@@ -56,3 +56,8 @@
 
 ### ベイズ
 [ベイズの定理とナイーブベイズ分類](https://hackmd.io/@fqZLfJuuS9O3vKeuZyZEfw/SkygLNZ-f?type=view)
+
+
+### 相関係数
+[【統計学】相関係数の検定（RとPython）](http://midsum-datasience.hatenablog.com/entry/2018/07/08/171113)  
+[相関係数の検定(無相関検定)(notebookの一部)](http://lang.sist.chukyo-u.ac.jp/classes/PythonProbStat/Python-statistics4.html#RS04:correlationTest)

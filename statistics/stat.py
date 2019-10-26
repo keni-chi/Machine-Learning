@@ -78,7 +78,7 @@ def test_equal_dispersion(xa, xb):
 
 
 def test_ave_diff(xa, xb):
-    print('2群間: 対応なしt検定-------------------start')
+    print('2群間: 対応なしt検定(1A)-------------------start')
     # 2つの標本の平均値に有意差がないことを帰無仮説とする
     t, p = st.ttest_ind(xa, xb, equal_var=True)
     MU = abs(xa.mean()-xb.mean())
@@ -93,7 +93,7 @@ def test_ave_diff(xa, xb):
     print(f'平均値の差   = {MU:.2f}')
     print(f'差の標準誤差 = {SE:.2f}')
     print(f'平均値の差の95%信頼区間CI = [{CI1:.2f} , {CI2:.2f}]')
-    print('2群間: 対応なしt検定-------------------end')
+    print('2群間: 対応なしt検定(1A)-------------------end')
     
 
 def create_std_data():
@@ -146,6 +146,30 @@ def chisquare():
     print('適合度の検定-------------------end')
 
 
+def corr():
+    print('相関係数の検定-------------------start')
+    # 帰無仮説と対立仮説をたてる: 帰無仮説は ρ=0 、つまり母相関 =0 
+    # 対立仮説は「 ρ≠0 」、つまり母相関 ≠0
+ 
+    d1 = np.array([6,10,6,10,5,3,5,9,3,3,11,6,11,9,7,5,8,7,7,9])
+    d2 = np.array([10,13,8,15,8,6,9,10,7,3,18,14,18,11,12,5,7,12,7,7])
+
+    SampleCorr = st.pearsonr(d1, d2)
+    print('相関係数---')
+    r = SampleCorr[0]
+    print(r)
+    print('p値---')
+    p = SampleCorr[1]
+    print(p)
+
+    if p < 0.05:
+        print('棄却する。相関あり。')
+    else:
+        print('棄却しない。相関なし。')
+
+    print('相関係数の検定-------------------end')
+
+
 def main():
     xa, xb = read_data()
 
@@ -154,19 +178,25 @@ def main():
     basic_diff(xa, xb)
     # plt_hist(xa)
     # plt_hist(xb)
-    plt_multi(xa, xb)
-    test_std(xa, 'A群')
+    # plt_multi(xa, xb)
+    test_std(xa, 'A群') # 正規性の検定
     test_std(xb, 'B群')
-    interval_estimation(xa, 'A群')
+    interval_estimation(xa, 'A群') # 母平均　信頼区間
     interval_estimation(xb, 'B群')
-    test_equal_dispersion(xa, xb)
-    test_ave_diff(xa, xb)
+    test_equal_dispersion(xa, xb) # 分散の検定
+    test_ave_diff(xa, xb) # 平均の検定
     # create_std_data()
 
-    #############################
-    binom()
-    chi2_contingency()
-    chisquare()
+    #　############################
+ 
+    binom() # 母比率の検定
+    chi2_contingency() # 独立性の検定
+    chisquare() # 適合度の検定
+
+    #　############################
+
+    corr() # 相関係数の検定
+
 
 
 if __name__ == '__main__':

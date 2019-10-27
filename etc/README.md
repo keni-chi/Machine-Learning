@@ -80,3 +80,6 @@
 
 ### keras
 [Keras チュートリアル](https://qiita.com/sasayabaku/items/64a01363bcd5c44feb0b)
+
+### paper
+[機械学習/ディープラーニング初心者が2018年にやったこと、読んだ論文](https://qiita.com/koshian2/items/bb4afec12e5dd50aae50)  

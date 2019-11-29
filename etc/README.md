@@ -83,3 +83,7 @@
 
 ### paper
 [機械学習/ディープラーニング初心者が2018年にやったこと、読んだ論文](https://qiita.com/koshian2/items/bb4afec12e5dd50aae50)  
+
+### keras
+[はじめての Deep Learning - Keras で MLP for MNIST](https://m0t0k1ch1st0ry.com/blog/2016/07/15/keras/)
+

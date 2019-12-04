@@ -15,3 +15,4 @@ curl -X POST -u "apikey:{apikey}" --header "Content-Type: text/plain" --data "La
 [【AI事始め】Watson APIをPythonで使ってみる（Language Translator）](https://qiita.com/kg1/items/88be91c5ecde8600220e)  
 [watsonAPI LanguageTranslator で翻訳！！](https://qiita.com/van/items/8ab08bce0270baf377a2)  
 [Watson API 目次](https://www.ibm.com/blogs/solutions/jp-ja/watson-api-matome/#section1)  
+[AWS, Azure, GCPのGPUインスタンスを比較](https://techblog.nhn-techorus.com/archives/16358)  

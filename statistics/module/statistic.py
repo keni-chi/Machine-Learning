@@ -41,35 +41,43 @@ class StatisticalTests():
             se = math.sqrt(u2/len(s))  # 標準誤差
 
             ci1, ci2 = st.t.interval(alpha=0.95, loc=m, scale=se, df=n)
-            print(f'カラム名 = {column_name} // 母平均の95%信頼区間CI = \
-                  [{ci1:.2f} , {ci2:.2f}] // 標本平均[{m}]')
+            print(f'カラム名 = {column_name} // 母平均の95%信頼区間CI = '
+                  f'[{ci1:.2f} , {ci2:.2f}] // 標本平均[{m}]')
 
     def shapiro(self, df):
-        print('シャピロ・ウィルク検定(データの正規性の統計検定)------------------start')
+        print('シャピロ・ウィルク検定(正規性の検定)------------------start')
         for column_name, s in df.iteritems():
             _, p = st.shapiro(s)
             if p >= 0.05:
-                print(f'カラム名 = {column_name} // p値 = {p:.3f} \
-                      // 検定結果: 帰無仮説を採択して、正規性あり')
+                print(f'カラム名 = {column_name} // p値 = {p:.3f} '
+                      f'// 検定結果: 帰無仮説を採択して、正規性あり')
             else:
-                print(f'カラム名 = {column_name} // p値 = {p:.3f} \
-                      // 検定結果: 帰無仮説を棄却して、正規性なし')
+                print(f'カラム名 = {column_name} // p値 = {p:.3f} '
+                      f'// 検定結果: 帰無仮説を棄却して、正規性なし')
 
-    def ttest_ind(self, xa, xb):
-        print('2群間: 対応なしt検定-------------------start')
+    def levene(self, xa, xb):
+        print('2群間: 母平均の95%ルビーン検定による等分散性の検定-------------------start')
+        _, p = st.levene(xa, xb, center='mean')
+        if p >= 0.05:
+            print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を採択して、2つの標本には等分散性あり')
+        else:
+            print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を棄却して、2つの標本には等分散性なし')
+
+    def ttest_rel(self, xa, xb):
+        print('2群間: 対応ありt検定-------------------start')
         # 2つの標本の平均値に有意差がないことを帰無仮説とする
-        # 対応なしでは、Ａさん、Ｂさんのように薬の投与前後で同じ人を調べない
-        t, p = st.ttest_ind(xa, xb, equal_var=True)
+        # 対応ありでは、Ａさん、Ｂさんのように薬の投与前後で同じ人を調べる
+        t, p = st.ttest_rel(xa, xb)
         if np.sign(t) == -1:
             a = xa
             xa = xb
             xb = a
 
-        t, p = st.ttest_ind(xa, xb, equal_var=True)
+        t, p = st.ttest_rel(xa, xb)
         mu = abs(xa.mean()-xb.mean())
         se = mu/t
-        df = len(xa)+len(xb)-2
-        ci1, ci2 = st.t.interval(alpha=0.95, loc=mu, scale=se, df=df)
+        n = len(xa)+len(xb)-2
+        ci1, ci2 = st.t.interval(alpha=0.95, loc=mu, scale=se, df=n)
         if p >= 0.05:
             print(f'p値={p:.3f} // t値 = {t:.2f}')
             print(f'// 平均値の差 = {mu:.2f} // 差の標準誤差 = {se:.2f}')
@@ -81,13 +89,59 @@ class StatisticalTests():
             print(f'// 平均値の差の95%信頼区間CI = [{ci1:.2f} , {ci2:.2f}]')
             print(f'// 検定結果: 帰無仮説を棄却して、2つの標本の平均値に有意差あり')
 
-    def levene(self, xa, xb):
-        print('2群間: 母平均の95%ルビーン検定による等分散性のチェック-------------------start')
-        _, p = st.levene(xa, xb, center='mean')
+    def ttest_ind_equal_var_true(self, xa, xb):
+        print('2群間: 対応なし(2群間に等分散性あり)t検定-------------------start')
+        # 2つの標本の平均値に有意差がないことを帰無仮説とする
+        # 対応なしでは、Ａさん、Ｂさんのように薬の投与前後で同じ人を調べない
+        t, p = st.ttest_ind(xa, xb, equal_var=True)
+        if np.sign(t) == -1:
+            a = xa
+            xa = xb
+            xb = a
+
+        t, p = st.ttest_ind(xa, xb, equal_var=True)
+        self._ttest_ind(t, p, xa, xb)
+
+    def ttest_ind_equal_var_false(self, xa, xb):
+        print('2群間: 対応なし(2群間に等分散性なし)t検定-------------------start')
+        # 2つの標本の平均値に有意差がないことを帰無仮説とする
+        # 対応なしでは、Ａさん、Ｂさんのように薬の投与前後で同じ人を調べない
+        t, p = st.ttest_ind(xa, xb, equal_var=False)
+        if np.sign(t) == -1:
+            a = xa
+            xa = xb
+            xb = a
+
+        t, p = st.ttest_ind(xa, xb, equal_var=False)
+        self._ttest_ind(t, p, xa, xb)
+
+    def _ttest_ind(self, t, p, xa, xb):
+        mu = abs(xa.mean()-xb.mean())
+        se = mu/t
+        n = len(xa)+len(xb)-2
+        ci1, ci2 = st.t.interval(alpha=0.95, loc=mu, scale=se, df=n)
         if p >= 0.05:
-            print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を採択して、2つの標本には等分散性あり')
+            print(f'p値={p:.3f} // t値 = {t:.2f}')
+            print(f'// 平均値の差 = {mu:.2f} // 差の標準誤差 = {se:.2f}')
+            print(f'// 平均値の差の95%信頼区間CI = [{ci1:.2f} , {ci2:.2f}]')
+            print('// 検定結果: 帰無仮説を採択して、2つの標本の平均値に有意差なし')
         else:
-            print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を棄却して、2つの標本には等分散性なし')
+            print(f'p値={p:.3f} // t値 = {t:.2f}')
+            print(f'// 平均値の差 = {mu:.2f} // 差の標準誤差 = {se:.2f}')
+            print(f'// 平均値の差の95%信頼区間CI = [{ci1:.2f} , {ci2:.2f}]')
+            print(f'// 検定結果: 帰無仮説を棄却して、2つの標本の平均値に有意差あり')
+
+    def chisquare(self, sample, answer):
+        print('適合度の検定-------------------start')
+        # 対立仮説：得られたデータは理論上の分布に適合しない。
+        sample = sample.tolist()
+        answer = answer.tolist()
+
+        p = st.chisquare(sample, f_exp=answer)[1]
+        if p >= 0.05:
+            print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を採択して、理論上の分布に適合しないと結論づけられない。')
+        else:
+            print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を棄却して、理論上の分布に適合しないと結論づけられる。')
 
     def chi2_contingency(self, df):
         print('独立性の検定-------------------start')
@@ -102,52 +156,14 @@ class StatisticalTests():
         else:
             print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を棄却して、2つの変数は独立していないと結論付けられる。')
 
-    def chisquare(self, sample, answer):
-        print('適合度の検定-------------------start')
-        # 対立仮説：得られたデータは理論上の分布に適合しない。
-        sample = sample.tolist()
-        answer = answer.tolist()
-
-        p = st.chisquare(sample, f_exp=answer)[1]
-        if p >= 0.05:
-            print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を採択して、理論上の分布に適合しないと結論づけられない。')
+    def pearsonr(self, xa, xb):
+        print('相関係数の検定-------------------start')
+        # 帰無仮説と対立仮説をたてる: 帰無仮説は ρ=0 、つまり母相関 =0
+        # 対立仮説は「 ρ≠0 」、つまり母相関 ≠0
+        x1 = xa.values
+        x2 = xb.values
+        s = st.pearsonr(x1, x2)
+        if s[1] < 0.05:
+            print(f'相関係数 = {s[0]:.3f} // p値 = {s[1]:.3f} // 検定結果: 帰無仮説を棄却する。相関あり。')
         else:
-            print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を棄却して、理論上の分布に適合しないと結論づけられる。')
-
-
-def main():
-    df = pd.read_csv('./input.csv')
-    s = StatisticalTests()
-    df_num = s.get_df_cols_num(df)
-
-    # 基本情報
-    s.basic_info(df)
-
-    # 信頼区間
-    s.t_interval(df_num)
-
-    # 検定
-    s.shapiro(df_num)
-    s.levene(df_num['x1'], df_num['x2'])
-    s.levene(df_num['x1'], df_num['x5'])
-    s.ttest_ind(df_num['x2'], df_num['x1'])
-    s.ttest_ind(df_num['x1'], df_num['x5'])
-
-    # 検定（適合度）
-    df_sample = df_num.drop('x5', axis=1)
-    s.chisquare(df_sample['x1'], df_num['x2'])
-    s.chisquare(df_sample['x1'], df_num['x5'])
-
-    # 検定（独立性）
-    # データサンプル
-    df1 = pd.DataFrame([[30, 70], [20, 80]])
-    df2 = pd.DataFrame([[30, 200, 200], [15, 100, 400]])
-    df3 = pd.DataFrame([[15, 100, 400], [15, 100, 400], [15, 100, 400]])
-    # 検定実施
-    s.chi2_contingency(df1)
-    s.chi2_contingency(df2)
-    s.chi2_contingency(df3)
-
-
-if __name__ == '__main__':
-    main()
+            print(f'相関係数 = {s[0]:.3f} // p値 = {s[1]:.3f} // 検定結果: 帰無仮説を棄却しない。相関なし。')

@@ -53,6 +53,7 @@
 [パラメトリック検定とノンパラメトリック検定の違い](https://www.study-channel.com/2015/06/parametric-nonparametric-test.html)
 [Pythonで母比率の95%信頼区間を区間推定し、妥当なサンプルサイズを決定する方法](https://tanuhack.com/estimate-pop-rate/)  
 [Pythonでカイ二乗検定（適合度検定・独立性の検定）を行う方法 (Pythonによる統計学入門)](https://toukei.link/programmingandsoftware/statistics_by_python/chisqtest_by_python/)  
+[【Python】2群間での統計検定手法まとめ](https://qiita.com/suaaa7/items/745ac1ca0a8d6753cf60)  
 
 ### ベイズ
 [ベイズの定理とナイーブベイズ分類](https://hackmd.io/@fqZLfJuuS9O3vKeuZyZEfw/SkygLNZ-f?type=view)

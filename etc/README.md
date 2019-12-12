@@ -82,6 +82,7 @@
 [Keras チュートリアル](https://qiita.com/sasayabaku/items/64a01363bcd5c44feb0b)
 [はじめての Deep Learning - Keras で MLP for MNIST](https://m0t0k1ch1st0ry.com/blog/2016/07/15/keras/)  
 [keras for MNIST(digit-recognizer) in Kaggle](https://qiita.com/T_gdmuy/items/875ac8472f4bd6751314)  
+[【Python】KerasでVGG16を使って画像認識をしてみよう！](https://www.y-shinno.com/keras-vgg16/)  
 
 ### paper
 [機械学習/ディープラーニング初心者が2018年にやったこと、読んだ論文](https://qiita.com/koshian2/items/bb4afec12e5dd50aae50)  

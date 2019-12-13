@@ -60,19 +60,19 @@
 [MacbookにLightGBMをインストールする](https://ymegane88.hatenablog.com/entry/2018/12/13/005342)  
 
 #### genism
-- トピックモデリング用ライブラリ
-- 単語の並びなどを忘れて、単純に文書内にそれぞれの単語が何回出現したかという出現回数の情報だけを保持する  
+- トピックモデリング用ライブラリ  
+- 単語の並びなどを忘れて、単純に文書内にそれぞれの単語が何回出現したかという出現回数の情報だけを保持する    
 
 #### Mecab and Janome
-- 形態素解析のライブラリ
-- Janomeはpipコマンドで簡単に導入できる点がメリット。実行速度は劣る。
+- 形態素解析のライブラリ  
+- Janomeはpipコマンドで簡単に導入できる点がメリット。実行速度は劣る。  
 
 #### hdf5
-- NumPy から扱えるデータをファイルに保存するためのフォーマット<br><br>
+- NumPy から扱えるデータをファイルに保存するためのフォーマット  
 [h5py の簡単な使い方](https://www.qoosky.io/techs/861b4ae419)  
 
 #### Pillow
-[Pythonの画像処理ライブラリPillow(PIL)の使い方](https://note.nkmk.me/python-pillow-basic/)
+[Pythonの画像処理ライブラリPillow(PIL)の使い方](https://note.nkmk.me/python-pillow-basic/)  
 
 #### Sympy
 - Sympy...代数計算ライブラリ  

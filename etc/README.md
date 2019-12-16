@@ -68,8 +68,7 @@
 - Janomeはpipコマンドで簡単に導入できる点がメリット。実行速度は劣る。  
 
 #### hdf5
-- NumPy から扱えるデータをファイルに保存するためのフォーマット  
-[h5py の簡単な使い方](https://www.qoosky.io/techs/861b4ae419)  
+- [h5py の簡単な使い方](https://www.qoosky.io/techs/861b4ae419)  
 
 #### Pillow
 [Pythonの画像処理ライブラリPillow(PIL)の使い方](https://note.nkmk.me/python-pillow-basic/)  

@@ -64,8 +64,8 @@
 - 単語の並びなどを忘れて、単純に文書内にそれぞれの単語が何回出現したかという出現回数の情報だけを保持する    
 
 #### Mecab and Janome
-- 形態素解析のライブラリ  
-- Janomeはpipコマンドで簡単に導入できる点がメリット。実行速度は劣る。  
+[Python形態素解析ライブラリ3つを徹底比較](https://qiita.com/pika_shi/items/94df1d8f47ef82cf39c8)  
+- 形態素解析のライブラリ。Janomeはpipコマンドで簡単に導入できる点がメリット。実行速度は劣る。  
 
 #### hdf5
 - [h5py の簡単な使い方](https://www.qoosky.io/techs/861b4ae419)  

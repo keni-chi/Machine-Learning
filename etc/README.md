@@ -60,8 +60,7 @@
 [MacbookにLightGBMをインストールする](https://ymegane88.hatenablog.com/entry/2018/12/13/005342)  
 
 #### genism
-- トピックモデリング用ライブラリ  
-- 単語の並びなどを忘れて、単純に文書内にそれぞれの単語が何回出現したかという出現回数の情報だけを保持する    
+- [word2vecでベクトルから単語を出力する](https://qiita.com/iss-f/items/aec567ee5c79464413dc)  
 
 #### Mecab and Janome
 [Python形態素解析ライブラリ3つを徹底比較](https://qiita.com/pika_shi/items/94df1d8f47ef82cf39c8)  

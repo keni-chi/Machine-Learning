@@ -34,7 +34,7 @@
 #### 自然言語処理
 [形態素解析のライブラリ「Mecab」と「Janome」を使ってみよう](https://ushinji.hatenablog.com/entry/2017/11/23/161031)  
 [自然言語処理における前処理の種類とその威力](https://qiita.com/Hironsan/items/2466fe0f344115aff177)  
-[AIが三国志を読んだら、孔明が知力100、関羽が武力99、を求められるのか？をガチで考える物語（自然言語処理編）](https://qiita.com/youwht/items/92056e63498c36de4e3b) 
+[AIが三国志を読んだら、孔明が知力100、関羽が武力99、を求められるのか？をガチで考える物語（自然言語処理編）](https://qiita.com/youwht/items/92056e63498c36de4e3b)  
 [自然言語処理入門編！](https://qiita.com/cr-fun/items/cc82a85c572daac0b5c5)   
 [自然言語処理入門 まとめ【Python + Janome + gensim】](https://qiita.com/kodera123/items/a5921cbcd18b9a309787)  
 [データ解析: LDAの実装(gensim)](https://openbook4.me/projects/193/sections/1154)  

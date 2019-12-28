@@ -2,11 +2,10 @@ import pandas as pd
 import scipy.stats as st
 import math
 import numpy as np
-# import matplotlib.pyplot as plt
 
 
 class StatisticalTests():
-    def __init__(cls):
+    def __init__(self):
         pass
 
     @classmethod
@@ -54,7 +53,7 @@ class StatisticalTests():
             _, p = st.shapiro(s)
             if p >= 0.05:
                 print(f'カラム名 = {column_name} // p値 = {p:.3f} '
-                      f'// 検定結果: 帰無仮説を採択して、正規性あり')
+                      f'// 検定結果: 帰無仮説を採択して、正規性なしとは言えない')
             else:
                 print(f'カラム名 = {column_name} // p値 = {p:.3f} '
                       f'// 検定結果: 帰無仮説を棄却して、正規性なし')
@@ -64,7 +63,7 @@ class StatisticalTests():
         print('2群間: 母平均の95%ルビーン検定による等分散性の検定-------------------start')
         _, p = st.levene(xa, xb, center='mean')
         if p >= 0.05:
-            print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を採択して、2つの標本には等分散性あり')
+            print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を採択して、2つの標本には等分散性なしとは言えない')
         else:
             print(f'p値 = {p:.3f} // 検定結果: 帰無仮説を棄却して、2つの標本には等分散性なし')
 
@@ -88,7 +87,7 @@ class StatisticalTests():
             print(f'p値={p:.3f} // t値 = {t:.2f}')
             print(f'// 平均値の差 = {mu:.2f} // 差の標準誤差 = {se:.2f}')
             print(f'// 平均値の差の95%信頼区間CI = [{ci1:.2f} , {ci2:.2f}]')
-            print('// 検定結果: 帰無仮説を採択して、2つの標本の平均値に有意差なし')
+            print('// 検定結果: 帰無仮説を採択して、2つの標本の平均値に有意差があるとは言えない')
         else:
             print(f'p値={p:.3f} // t値 = {t:.2f}')
             print(f'// 平均値の差 = {mu:.2f} // 差の標準誤差 = {se:.2f}')
@@ -133,7 +132,7 @@ class StatisticalTests():
             print(f'p値={p:.3f} // t値 = {t:.2f}')
             print(f'// 平均値の差 = {mu:.2f} // 差の標準誤差 = {se:.2f}')
             print(f'// 平均値の差の95%信頼区間CI = [{ci1:.2f} , {ci2:.2f}]')
-            print('// 検定結果: 帰無仮説を採択して、2つの標本の平均値に有意差なし')
+            print('// 検定結果: 帰無仮説を採択して、2つの標本の平均値に有意差があるとは言えない')
         else:
             print(f'p値={p:.3f} // t値 = {t:.2f}')
             print(f'// 平均値の差 = {mu:.2f} // 差の標準誤差 = {se:.2f}')
@@ -175,7 +174,7 @@ class StatisticalTests():
         x1 = xa.values
         x2 = xb.values
         s = st.pearsonr(x1, x2)
-        if s[1] < 0.05:
-            print(f'相関係数 = {s[0]:.3f} // p値 = {s[1]:.3f} // 検定結果: 帰無仮説を棄却する。相関あり。')
+        if s[1] >= 0.05:
+            print(f'相関係数 = {s[0]:.3f} // p値 = {s[1]:.3f} // 検定結果: 帰無仮説を採択する。相関ありとは言えない。')
         else:
-            print(f'相関係数 = {s[0]:.3f} // p値 = {s[1]:.3f} // 検定結果: 帰無仮説を棄却しない。相関なし。')
+            print(f'相関係数 = {s[0]:.3f} // p値 = {s[1]:.3f} // 検定結果: 帰無仮説を棄却する。相関あり。')

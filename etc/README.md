@@ -14,8 +14,7 @@
 [データ分析でよく使う前処理の整理と対処](https://researchmap.jp/?action=cv_download_main&upload_id=149566)  
 [データ分析初心者は「前処理大全」でデーxタ前処理を学べ](https://nori-life-log.com/%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E5%88%9D%E5%BF%83%E8%80%85%E3%81%AF%E3%80%8C%E5%89%8D%E5%87%A6%E7%90%86%E5%A4%A7%E5%85%A8%E3%80%8D%E3%81%A7%E3%83%87%E3%83%BC%E3%82%BF%E5%89%8D%E5%87%A6)
 [Rで実践！欠損データ分析入門【1】](https://techblog.nhn-techorus.com/archives/6309)
-[欠損値の補完と削除を用いたハイブリッド欠損値処理の提案](https://www.jstage.jst.go.jp/article/jssst/34/4/34_4_144/_pdf)
-
+[欠損値の補完と削除を用いたハイブリッド欠損値処理の提案](https://www.jstage.jst.go.jp/article/jssst/34/4/34_4_144/_pdf)  
 
 #### アンサンブル学習
 [XGBoostの主な特徴と理論の概要](https://qiita.com/yh0sh/items/1df89b12a8dcd15bd5aa)  
@@ -48,6 +47,8 @@
 [Googleが公開した自然言語処理の最新技術、BERTとは何者なのか](https://ai-scholar.tech/text-mining/bert-ai-93/)  
 [自然言語処理の最新動向ウォッチでよくみるサイト（随時追加）](https://qiita.com/LeftLetter/items/d705bb21e66b87657b28)  
 
+#### 画像処理
+[【異常検知】深層距離学習の最新手法を使ってみる](https://qiita.com/shinmura0/items/d2a3a46c3fb287a1ea0e)  
 
 ### ライブラリ別
 

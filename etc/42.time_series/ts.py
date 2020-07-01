@@ -40,7 +40,7 @@ def vizualize_ts(data):
     seasonal_decompose_res.plot()
     plt.show()
 
-    # データを定常にする（処理前） ##################
+    # データを定常にする（処理前） ###############
     # トレンド項あり（１次まで）、定数項あり
     ct = sm.tsa.stattools.adfuller(data.earnings, regression="ct")
     # トレンド項なし、定数項あり

@@ -33,7 +33,7 @@
         ARモデル（自己回帰モデル）
             時間の変化に対し規則的に値が変化する、最も単純な時系列モデル
         MAモデル（移動平均モデル）
-            に時間の変化に対し不規則に値が変化します。 ただし、ある区間での変動が一定である
+            時間の変化に対し不規則に値が変化します。 ただし、ある区間での変動が一定である
         ARMAモデル（自己回帰移動平均モデル）
             ARモデルとMAモデルの組み合わせ
     非定常過程
@@ -50,4 +50,5 @@
 # 参考
 [データ解析に関するいろいろな手法・考え方・注意点のまとめ](https://datachemeng.com/summarydataanalysis/)  
 [Pythonのstatsmodelsで時系列分析をする](https://qiita.com/hcpmiyuki/items/b1783956dee20c6d4700#%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF)  
+[未来を予測するビッグデータの解析手法と「SARIMAモデル」](https://deepage.net/bigdata/2016/10/22/bigdata-analytics.html)  
 

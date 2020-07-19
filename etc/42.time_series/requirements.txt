@@ -1,0 +1,10 @@
+Hmmlearn==0.2.1
+Matplotlib==3.0.3
+Numpy==1.16.2
+Pandas==0.24.2
+Pykalman==0.9.5
+Scikit-learn==0.20.3
+requests
+StatsModels==0.9.0
+SciPy==1.2.1
+TensorFlow==2.0.0a0

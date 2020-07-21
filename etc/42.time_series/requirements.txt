@@ -9,3 +9,4 @@ StatsModels==0.9.0
 SciPy==1.2.1
 TensorFlow==2.0.0a0
 seaborn
+pandas_datareader

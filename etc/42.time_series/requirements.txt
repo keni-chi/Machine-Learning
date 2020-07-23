@@ -10,3 +10,4 @@ SciPy==1.2.1
 TensorFlow==2.0.0a0
 seaborn
 pandas_datareader
+changefinder

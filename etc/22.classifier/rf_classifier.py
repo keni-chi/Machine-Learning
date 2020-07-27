@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import pickle
 import sklearn.datasets as datasets
 from sklearn.decomposition import PCA
 from sklearn.ensemble import RandomForestClassifier
@@ -28,13 +29,22 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 model = RandomForestClassifier(n_estimators=20,n_jobs=-1)
 model.fit(X_train, y_train)
 
+#モデルを保存する
+print('モデルを保存-------------------start')
+filename = 'model.pkl'
+pickle.dump(model, open(filename, 'wb'))
+
+#モデルを読み込む
+print('モデルを読み込む-------------------start')
+m = pickle.load(open(filename, 'rb'))
+
 #正解率
-print ("train正解率",model.score(X_train, y_train))
-print ("test正解率",model.score(X_test, y_test))
+print ("train正解率",m.score(X_train, y_train))
+print ("test正解率",m.score(X_test, y_test))
 
 #予測データ作成
-y_train_pred = model.predict(X_train)
-y_test_pred = model.predict(X_test)
+y_train_pred = m.predict(X_train)
+y_test_pred = m.predict(X_test)
 
 # # 予測と正解の比較
 # plot_pred_and_actual(y_train, y_train_pred)

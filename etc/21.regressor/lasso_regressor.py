@@ -1,9 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd
 from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
+# from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import Lasso
+
 
 def plot_regressor(pred, actual):
     fig = plt.figure()
@@ -20,19 +21,6 @@ def plot_regressor(pred, actual):
     plt.grid()
     plt.show()
 
-
-def plot_rf_feature_importance(feature, columns):
-    # 特徴量の重要度順（降順）
-    indices = np.argsort(feature)[::-1]
-
-    plt.title('Feature Importance')
-    plt.bar(range(len(feature)),feature[indices], color='lightblue', align='center')
-    plt.xticks(range(len(feature)), columns[indices], rotation=90)
-    plt.xlim([-1, len(feature)])
-    plt.tight_layout()
-    plt.show()
-
-
 # データ読み込み
 boston = load_boston()
 X_array = boston.data
@@ -40,7 +28,7 @@ y_array = boston.target
 X_train, X_test, y_train, y_test = train_test_split(X_array, y_array, test_size=0.2, random_state=0)
 
 # 学習
-model = RandomForestRegressor(random_state=0)
+model = Lasso()
 model.fit(X_train, y_train)
 
 # 評価
@@ -53,11 +41,3 @@ plot_regressor(y_train_pred, y_train)
 
 y_test_pred = model.predict(X_test)
 plot_regressor(y_test_pred, y_test)
-
-
-#特徴量の重要度
-feature = model.feature_importances_
-# df = pd.DataFrame(boston.data, columns=boston.feature_names)
-columns = boston.feature_names[0:]
-plot_rf_feature_importance(feature, columns)
-

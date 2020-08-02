@@ -4,6 +4,7 @@ from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
 # from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import Lasso
+from sklearn.preprocessing import StandardScaler
 
 
 def plot_regressor(pred, actual):
@@ -26,6 +27,12 @@ boston = load_boston()
 X_array = boston.data
 y_array = boston.target
 X_train, X_test, y_train, y_test = train_test_split(X_array, y_array, test_size=0.2, random_state=0)
+
+# 標準化処理
+sc = StandardScaler()
+sc.fit(X_train)
+X_train = sc.transform(X_train)
+X_test = sc.transform(X_test)
 
 # 学習
 model = Lasso()

@@ -11,3 +11,4 @@ TensorFlow==2.0.0a0
 seaborn
 pandas_datareader
 changefinder
+scikit-optimize

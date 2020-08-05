@@ -296,3 +296,6 @@
 [ランダムウォーク, ローカルレベルモデル](https://logics-of-blue.com/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AC%E3%83%99%E3%83%AB%E3%83%A2%E3%83%87%E3%83%AB/#:~:text=%EF%BC%92%EF%BC%8E%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%BB%E3%83%AC%E3%83%99%E3%83%AB%E3%83%BB%E3%83%A2%E3%83%87%E3%83%AB&text=%E3%81%93%E3%81%84%E3%81%A4%E3%81%8C%E4%BD%95%E3%81%AA%E3%81%AE%E3%81%8B,%E3%83%97%E3%83%A9%E3%82%B9%20%E3%83%8E%E3%82%A4%E3%82%BA%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AA%E3%82%93%E3%81%A7%E3%81%99%E3%81%AD%E3%80%82)  
 [カルマンフィルタってなに？](https://qiita.com/IshitaTakeshi/items/740ac7e9b549eee4cc04)  
 [時系列解析](https://www.kyoritsu-pub.co.jp/bookdetail/9784320125018)  
+[PythonによるSARIMAXモデルを使った「TVCMの効果検証」への挑戦](https://www.lifull.blog/entry/2019/12/25/151030)  
+[TV朝日の視聴率推移をSARIMAモデルで予測してみる](https://qiita.com/mshinoda88/items/749131478bfefc9bf365)  
+[定常時系列の解析に使われるARMAモデル・SARIMAモデルとは？](https://ai-trend.jp/basic-study/time-series-analysis/sarima_model/)  

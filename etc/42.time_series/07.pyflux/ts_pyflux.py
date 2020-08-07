@@ -1,3 +1,5 @@
+# pyfluxのインストールに失敗し実行に至らず
+
 import numpy as np
 import pandas as pd
 import pyflux as pf

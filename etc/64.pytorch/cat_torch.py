@@ -37,7 +37,7 @@ y = Variable(torch.from_numpy(y_train).float())
 net = Net()
 
 # 最適化関数
-optimizer = optim.SGD(net.parameters(), lr=0.01)
+optimizer = optim.SGD(net.parameters(), lr=0.01)  # 学習率
 
 # 損失関数
 criterion = nn.MSELoss()

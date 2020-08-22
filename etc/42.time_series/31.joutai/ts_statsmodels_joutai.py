@@ -118,9 +118,11 @@ def predict_trend_season(ts):
 
 
 def mod_season_trend_d(ts):
+    # 季節変動ありのローカル線形トレンドモデル
+    # ただし、トレンドの分散は無し
     mod_season_trend_d = sm.tsa.UnobservedComponents(
         ts,
-        'local linear deterministic trend',
+        'local linear deterministic trend',  # 変更点
         seasonal=12
     )
 
@@ -142,6 +144,8 @@ def mod_season_trend_d(ts):
 
 
 def res_season_rw(ts):
+    # 季節変動ありのローカル線形トレンドモデル
+    # ただし、トレンドと観測誤差の分散は無し
     mod_season_rw = sm.tsa.UnobservedComponents(
         ts,
         'random walk with drift',  # 変更点
@@ -170,7 +174,7 @@ def compare_model(model_list):
     aic_list = pd.DataFrame([], columns=["model", "aic"], index=range(len(model_list)))
 
     for i, m in enumerate(model_list):
-        add_row = ["res_local_level", m.aic]
+        add_row = [i, m.aic]
         aic_list.iloc[i,:] = add_row
 
     # 結果の表示

@@ -206,6 +206,7 @@
             見えない状態の部分がランダムウォークしているとみなしているモデルのこと。
             状態がランダムウォークしていて、それに観測誤差であるところのノイズが加わって生じたのが観測値だ、とみなす。
             そのため、別名がランダムウォーク　プラス　ノイズモデル。
+            ローカルレベルモデルは推定は簡単なのですが、じつは「来期の予測値は前期の観測値と同じ」という予測結果を出す。逆に言えば、ローカルレベルモデル以上の予測結果が出せなければ、複雑なモデルを使う意味がないということとなる。
         ローカル線形トレンドモデル
         基本構造時系列モデル
             構造時系列モデルとは
@@ -282,21 +283,22 @@
 
 
 # 参考
-[データ解析に関するいろいろな手法・考え方・注意点のまとめ](https://datachemeng.com/summarydataanalysis/)  
-[Pythonのstatsmodelsで時系列分析をする](https://qiita.com/hcpmiyuki/items/b1783956dee20c6d4700#%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%83%87%E3%83%BC%E3%82%BF)  
+
+
+## 全体
+[時系列解析―自己回帰型モデル・状態空間モデル・異常検知― ](https://www.kyoritsu-pub.co.jp/bookdetail/9784320125018)  
+[時系列データへの回帰分析フローチャート](https://logics-of-blue.com/time-series-regression/)  
+
+
+## 自己回帰型モデル
 [未来を予測するビッグデータの解析手法と「SARIMAモデル」](https://deepage.net/bigdata/2016/10/22/bigdata-analytics.html)  
+[MA過程の反転可能性](https://analytics-note.xyz/time-series/ma-invertible/)  
 [ARCHモデル](https://ja.wikipedia.org/wiki/ARCH%E3%83%A2%E3%83%87%E3%83%AB)  
 [VARモデルによる計量時系列分析の基本と因果推定 with R](https://qiita.com/saltcooky/items/2d0119ea4a10bab6cff2)  
-[MA過程の反転可能性](https://analytics-note.xyz/time-series/ma-invertible/)  
-[時系列データの予測ライブラリ--PyFlux--](https://qiita.com/GushiSnow/items/437dde3293f6d77bfa58#%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E5%AE%9A%E7%BE%A9)  
-[時系列データへの回帰分析フローチャート](https://logics-of-blue.com/time-series-regression/)  
+
+
+## 状態空間モデル
 [時系列分析と状態空間モデルの基礎](https://logics-of-blue.com/wp-content/uploads/2018/01/tsa-ssm-book-contents.pdf)  
 [状態空間モデルの考え方・使い方](https://www.slideshare.net/horihorio/tokyo-r38-33704463)  
-[Pythonによる状態空間モデル](https://logics-of-blue.com/python-state-space-models/)  
 [ランダムウォーク, ローカルレベルモデル](https://logics-of-blue.com/%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%AC%E3%83%99%E3%83%AB%E3%83%A2%E3%83%87%E3%83%AB/#:~:text=%EF%BC%92%EF%BC%8E%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%BB%E3%83%AC%E3%83%99%E3%83%AB%E3%83%BB%E3%83%A2%E3%83%87%E3%83%AB&text=%E3%81%93%E3%81%84%E3%81%A4%E3%81%8C%E4%BD%95%E3%81%AA%E3%81%AE%E3%81%8B,%E3%83%97%E3%83%A9%E3%82%B9%20%E3%83%8E%E3%82%A4%E3%82%BA%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AA%E3%82%93%E3%81%A7%E3%81%99%E3%81%AD%E3%80%82)  
 [カルマンフィルタってなに？](https://qiita.com/IshitaTakeshi/items/740ac7e9b549eee4cc04)  
-[時系列解析](https://www.kyoritsu-pub.co.jp/bookdetail/9784320125018)  
-[PythonによるSARIMAXモデルを使った「TVCMの効果検証」への挑戦](https://www.lifull.blog/entry/2019/12/25/151030)  
-[TV朝日の視聴率推移をSARIMAモデルで予測してみる](https://qiita.com/mshinoda88/items/749131478bfefc9bf365)  
-[定常時系列の解析に使われるARMAモデル・SARIMAモデルとは？](https://ai-trend.jp/basic-study/time-series-analysis/sarima_model/)   
-[時系列データの予測ライブラリ--PyFlux--](https://qiita.com/GushiSnow/items/437dde3293f6d77bfa58)  

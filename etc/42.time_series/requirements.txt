@@ -12,3 +12,4 @@ seaborn
 pandas_datareader
 changefinder
 scikit-optimize
+imblearn

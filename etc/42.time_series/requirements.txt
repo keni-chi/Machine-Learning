@@ -13,3 +13,5 @@ pandas_datareader
 changefinder
 scikit-optimize
 imblearn
+pip install shap==0.29.3
+pdpbox

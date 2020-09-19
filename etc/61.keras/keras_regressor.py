@@ -86,20 +86,16 @@ y_test_std = sc2.transform(y_test.reshape(-1, 1))
 
 model = Sequential()
 print((X_train_std.shape[1],))
-model.add(Dense(64, activation='relu', input_shape=(X_train_std.shape[1],)))
+# model.add(Dense(64, activation='relu', input_shape=(X_train_std.shape[1],)))
+model.add(Dense(64, input_shape=(X_train_std.shape[1],)))
+model.add(Activation('relu'))
 
-# model.add(Dense(16, activation='relu'))
+# model.add(Dense(32))
 # model.add(BatchNormalization())
-# model.add(Dropout(0.2))
-# model.add(Dense(8, activation='relu'))
-# model.add(Dropout(0.2))
-# model.add(Dense(4, activation='relu'))
-# model.add(Dropout(0.2))
-# model.add(Dense(2, activation='relu'))
-# model.add(Dropout(0.2))
+# model.add(Activation('relu'))
+# model.add(Dropout(0.5))
 
 model.add(Dense(1))
-
 model.compile(optimizer='adam', 
               loss='mse', 
               metrics=['mae'])

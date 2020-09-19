@@ -16,3 +16,5 @@ pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/wh
 ## 参考
 [PyTorchでシンプルな多層ニューラルネットワークを作ろう](https://qiita.com/sudamasahiko/items/b54fed1ffe8bb6d48818)  
 [ディープラーニング初心者がPyTorchを選んだ3つの理由](https://watlab-blog.com/2020/01/26/pytorch/)  
+[【PyTorch】チュートリアル(日本語版 )① 〜テンソル〜](https://qiita.com/Hexans/items/bb0f95c0c180f696a598)  
+[【PyTorchチュートリアル①】What is PyTorch?](https://qiita.com/sudominoru/items/544aec4dc867187a93fa)  

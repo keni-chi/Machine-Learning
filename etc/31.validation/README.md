@@ -58,17 +58,30 @@
                 混同行列
                     confusion_matrix
                     精度=TP+TN/TP+TN+FP+FN
-                    適合率=TP/TP+FP  偽陰性の数を制限したい時に用いる。PPVとも呼ばれる。高価な臨床用の薬の節約。
-                    再現率=TP/TP+FN  実際に陽性のサンプルの内、陽性と予測されたものの割合。癌の人を全てみつけて、健康な人を癌と予測してもよい。
+                    適合率=TP/TP+FP
+                        偽陰性の数を制限したい時に用いる。PPVとも呼ばれる。高価な臨床用の薬の節約。
+                        陽性であると予測した内の何%が当たっていたかを示す。大きいほどよい。
+                    再現率=TP/TP+FN 
+                        実際に陽性のサンプルの内、陽性と予測されたものの割合。癌の人を全てみつけて、健康な人を癌と予測してもよい。
+                        本当に陽性であるケースの内、何%を陽性と判定できたかを示す。大きいほどよい。
                     f=2*(適合率×再現率)/(適合率＋再現率) f-スコア、f-値。適合率と再現率をまとめる方法。
                     適合率、再現率、f-スコアの包括的なレポート
                         classification_report
         クラス分類におけるscoreingパラメータ値として重要な物
             accuracy
-            roc_auc(ROCカーブの下領域(AUC))。
-                偏ったデータを評価する際にはAUCを用いることを勧める。
-                FPR=FP/FP+TN 偽陽性率。TPRは真陽性率(再現率の別名)。
-            average_precision(適合率-再現率カーブ下領域)
+            ROC曲線
+                X(偽陽性率)、Y(真陽性率)
+                偽陽性
+                roc_auc(ROCカーブの下領域(AUC))。
+                    偏ったデータを評価する際にはAUCを用いることを勧める。
+                    FPR=FP/FP+TN 偽陽性率。TPRは真陽性率(再現率の別名)。
+                AUC(ROC曲線の下側面積)が大きいほどよい
+            PR曲線
+                X(再現率Recall)、Y(適合率Precision)
+                average_precision(適合率-再現率カーブ下領域)
+                AUPR(下面積)・・・適合率 + 再現率 の合計。
+                歪みの大きい（陽性例より陰性例の方が圧倒的に多い）データを分析する際には、PR曲線を用いる。（PR曲線はROC曲線に比べ、よりランキング上位のサンプルの予測の正確さを重視するため）
+                PR曲線のAUCの方が「ランキングが上位のサンプルの予測の正確さ」をより重視するのに対し，逆にROC曲線のAUCは「ランキング全体に渡る正確さ」を満遍なく評価している
             f1
             f1_macro
             f1_micro
@@ -98,3 +111,6 @@
 # 参考
 [データ解析に関するいろいろな手法・考え方・注意点のまとめ](https://datachemeng.com/summarydataanalysis/)  
 [線形な手法とカーネル法（回帰分析）](https://qiita.com/wsuzume/items/09a59036c8944fd563ff)  
+[【ROC曲線とAUC】機械学習の評価指標についての基礎講座](https://www.randpy.tokyo/entry/roc_auc)  
+[AUCとAUPRを用いて予測性能を評価](https://mi-chan-nel.com/evaluation-of-prediction-performance/)  
+[ROC曲線とPR曲線の違いについての考察](https://qiita.com/skyshk/items/016cd1820650ea78d101)  

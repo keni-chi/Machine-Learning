@@ -13,5 +13,8 @@ pandas_datareader
 changefinder
 scikit-optimize
 imblearn
-pip install shap==0.29.3
+shap==0.29.3
 pdpbox
+dash==1.11.0
+opencv-python==4.4.0.42
+

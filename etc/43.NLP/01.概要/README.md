@@ -234,6 +234,50 @@
     8.2.Attention付きseq2seqの実装
         AttentionEncoder,AttentionDecoder,AttentionSeq2seqクラスを実装
     8.3.Attentionの評価
+        8.3.1.日付フォーマットの変換問題
+        8.3.2.Attention付きseq2seqの学習
+            attention,peeky,baselineで日付フォーマットの変換のaccuracyを比較
+        8.3.3.Attentionの可視化
+            08がAUGUSTと対応すると学習できていることを可視化
+    8.4.Attentionに関する残りのテーマ
+        8.4.1.双方向RNN
+            Embedding→LSTM,LSTM→hs
+        8.4.2.Attentionレイヤの使用方法
+            Attentionレイヤは、これまで見たようなLSTMとAffineの間以外の場所にも置くことができる。
+            例えば、現時刻のLSTMと次時刻のLSTMの間。
+        8.4.3.seq2seqの深層化とskipコネクション
+    8.5.Attentionの応用
+        8.5.1.GNMT
+            2016年からgoogle翻訳
+            GNMTはAttention付きseq2seqと同じく、EncoderとDecoderそしてAttentionから構成される。
+        8.5.2.Transformer
+            RNNはこれまで必ず登場した。
+            RNNの欠点の一つに並列化処理がある。RNNは前時刻に計算した結果を用いて逐次的に計算する。そのため、時間方向で並列計算できない。
+            RNNを避けたいというモチベーションが生まれる。その中で有名なのがTransformer。
+            CNNで並列化する研究もある。
+            TransformerはAttentionで構成されるが、その中でもSelf-Attentionが重要。
+            一つの時系列データ内において各要素が他の要素に対してどのような関連性があるかみるもの。
+                これまでのTimeAttentionはhs_encodeとhs_decodeと異なる２つの時系列が入力される。
+            レイヤ構成
+                enc
+                    TimeEmbedding→Nx(TimeAttention→FeedForward)
+                dec
+                    TimeEmbedding→Nx(TimeAttention→TimeAttention→FeedForward)→TimeAffine→TimeSoftmaxwithLoss
+                FeedForward
+                    時間方向に独立したネットワーク。隠れ層が１層で、活性化関数にReLUを用いた全結合NN。
+        8.5.3.NTM
+            外部メモリによる拡張。RNNやLSTMの内部状態は固定長であり、詰め込める情報量に制限があったが、外部メモリにより適宜記録する。
+            NTMは外部メモリに対して読み書きしながら時系列データを処理する。
+            このようなメモリ操作を微分可能な計算で構築している。そのため、メモリ操作の手順をデータから学習できる。
+                LSTM(t)→WriteHead→Memory→ReadHead→LSTM(t+1)
+            2つのAttentionを利用
+                コンテンツベースのAttention
+                    あるベクトル（クエリベクトル）に対して、それに似たおベクトルをメモリから見つける用途で使われる。
+                位置ベースのAttention
+                    前時刻に注目したメモリの位置に対して、その前後に移動するような用途で使われる。    
+
+
+
 
 
 

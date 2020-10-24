@@ -112,10 +112,129 @@
         RNNLM(RNN Language Model)
         5.4.1.RNNLMの全体像
             Embedding→RNN→Affine→Softmax
+        5.4.2.Timeレイヤの実装
+            T個分の時系列データをまとめて処理するレイヤ
+            TimeEmbedding→TimeRNN→TimeAffine,ts→TimeSoftmax
+    5.5.RNNLMの学習と評価
+        5.5.1.RNNLMの実装
+        5.5.2.言語モデルの評価
+            パープレキシティ
+                確率の逆数。小さいほど良い。
+6.ゲート付きRNN
+    6.1.RNNの問題点
+        6.1.2.勾配消失もしくは勾配爆発
+        6.1.4.勾配爆発への対策
+            勾配クリッピング
+                閾値を使用
+    6.2.勾配消失とLSTM
+        勾配消失の対策としてLSTM,GRU
+        LSTMのゲート
+            input,forget,output
+    6.3.LSTMの実装
+        6.3.1.TimeLSTMの実装
+            T個分の時系列データをまとめて処理するレイヤ
+    6.4.LSTMを使った言語モデル
+        TimeEmbedding→TimeLSTM→TimeAffine,ts→TimeSoftmaxwithLoss
+    6.5.RNNLMのさらなる改善
+        6.5.1.LSTMレイヤの多層化
+            表現力を向上。
+        6.5.2.Dropoutによる過学習の抑制
+            正則化も有効
+            時系列方向へのDropoutの挿入は、良くない。時間が進むにつれて情報が失われる。
+            LSTM層とLSTM層の間にDropoutを挿入する。
+            しかし最近「変分Dropout」で時間方向への適用も成功している。（同じ階層にあるDropoutでは共通のマスクを使う）
+        6.5.3.重み共有
+            Embedding→LSTM→LSTM→Affine→SoftmaxwithLoss (EmbeddingとAffineで重みを共有)
+                学習パラメータを削減できる（学習が容易となる、過学習を抑制できる）。精度を向上できる。
+        6.5.4.より良いRNNLMの実装
+            ３つの改善を実装
+7.RNNによる文章生成
+    文章生成
+    seq2seqの理解。（機械翻訳、自動要約、質疑応答、チャットボット、メールの返信、など）
+    7.1.RNNによる文章生成
+        7.1.1.RNNによる文章生成の手順
+            これまでのモデルは、単語を与えたとき、次に出現する単語の確率分布を出力する。
+            次の単語を新たに生成するにはどうするか？
+                案１：最も確率の高い単語を選ぶ
+                案２：確率的に選ぶ
+                Iという単語を与え次の単語を生成、生成した単語を使って次の単語を生成、、、と行う。（7.2.1では、Iでなくeosを利用）
+        7.1.3.さらに良い文章へ
+            前章でパープレキシティを改良した。その実力を見る。
+    7.2.seq2seq
+        時系列データを別の時系列データに変換
+        ２つのRNNを利用
+        7.2.1.seq2seqの原理
+            seq2seqはEncoder-Decoderモデルとも呼ばれる
+            Encoder
+                時系列データをhという隠れ状態ベクトルに変換
+                LSTMレイヤの最後の隠れ状態
+                重要な点は、hは固定長のベクトルである。
+                任意の長さの文章を固定長のベクトルに変換することとなる。
+                Embedding→LSTM→h
+            Decoder
+                Embedding,h→LSTM→Affine→Softmax
+                hを受け取る以外は前節と同じだが、進化となる。
+        7.2.2.時系列データ変換用のトイ・プロブレム
+            足し算の例
+        7.2.3.可変長の時系列データ
+            パディング
+    7.3.seq2seqの実装
+    7.4.seq2seqの改良
+        7.4.1.入力データの反転(Reverse)
+        7.4.2.覗き見
+            hをもっと活用
+                DecoderのすべてのLSTMレイヤとAffineレイヤにhを与える
+                Affineレイヤへの入力２本はconcatノードで結合して、Affineレイヤへ入力する
+    7.5.seq2seqを用いたアプリケーション
+        7.5.1.チャットボット
+        7.5.2.アルゴリズムの学習
+            ソースコード
+        7.5.3.イメージキャプチョン
+            画像を文章へ変換
+            EncoderをLSTMからCNNに置き換えた
+            CNNの出力の特徴マップは3次元なので、Affine変換で1次元に変換し、Decoderへ入力する。
+8.Attention
+    8.1.Attentionの仕組み
+        必要な情報にだけ注意を向ける
+        8.1.1.seq2seqの問題点
+            固定長のベクトルが問題。
+        8.1.2.Encoderの改良
+            各時刻のLSTMレイヤの隠れ状態ベクトルをすべて利用する。入力文の長さに比例した情報をエンコードできるようになる。
+            hsは単語の数だけベクトルがあり、それぞれのベクトルは各単語に対応した情報を多く含む（ここでは単方向LSTM）
+        8.1.3.Decoderの改良１
+            アライメント
+                猫=catのような単語（またはフレーズ）の対応を表す情報
+                Attentionはseq2seqに自動でアライメントのアイデアを取り込む
+            Decoder
+                Embedding,hs最終行→LSTM,hs→(何らかの計算)→Affine→Softmax
+            (何らかの計算)で、吾輩に対応する単語はI、とhsから選び出す。
+            選ぶという操作を、微分可能な演算に置き換える。
+                すべてを選ぶ、ことで解決。各単語の重要度を表す重み(a)を別途計算する。(重みの求め方は8.1.4で後述)
+                hsと重み(a)から、重み付き和を求める。その結果は「コンテキストベクトル(c)」。
+                cには吾輩ベクトルを多く含む結果を得る。つまり、「吾輩」ベクトルを選ぶ操作を、(c)で代替していると言える。
+        8.1.4.Decoderの改良２
+            重みaを求める。
+            Embedding,hs最終行→LSTM→h
+            目指すのは、hがhsの各単語ベクトルと「どれだけ似ているか」を数値で表すこと。
+            その数値化の方法が内積。
+            内積の結果をsとする。（正規化前の値であり、スコアと呼ぶこともある）
+            sを正規化するために、Softmax関数を適用する。s→a
+            各単語の重みを求める計算グラフ
+                h→hr,hs→t→s→a
+        8.1.5.Decoderの改良３
+            8.1.3ではWeightSum
+            8.1.4ではAttentionWeight
+            hs,h→AttentionWeight→a,hs→WeightSum→c
+                Encoderが出力する各単語のベクトルhsに対してAttentionWeightレイヤが注意を払い、各単語の重みaを求める。
+                それに続き、WeightSumレイヤがaとhsの重み付き和を求め、それをコンテキストベクトルcとして出力する。
+                この一連の計算を行うレイヤをAttentionレイヤと呼ぶこととする。
+            Embedding,hs最終行→LSTM,hs→Attention,LSTM→Affine→Softmax
+                Attentionの情報（コンテキストベクトル）を追加することになる。
+                元々あるLSTM（隠れ状態ベクトル）との連結したベクトルが、Affineに入力される。
+    8.2.Attention付きseq2seqの実装
+        AttentionEncoder,AttentionDecoder,AttentionSeq2seqクラスを実装
+    8.3.Attentionの評価
 
 
 
-
-
-## 参考
 

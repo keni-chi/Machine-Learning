@@ -44,5 +44,5 @@ BERT
 [2019年はBERTとTransformerの年だった](https://ainow.ai/2020/02/25/183082/)  
 [Longformer: The Long-Document Transformer](https://github.com/reo11/papers100knock/issues/35)  
 [最近のDeep Learning (NLP) 界隈におけるAttention事情](https://www.slideshare.net/yutakikuchi927/deep-learning-nlp-attention)  
-
+[自然言語処理でBERTまでの流れを簡単に紹介](https://nmoriyama.hatenablog.com/entry/2020/01/24/160351)
 

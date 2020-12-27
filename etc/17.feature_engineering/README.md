@@ -36,11 +36,12 @@
             Rounding:　連続値の場合は、ある程度のところで四捨五入する
             scaling:　Standard(Z) Scaling, MinMax Scaling, Root Scaling, Log scaling
             sigmoid / tanh / log transformations: 
+            集計関数: SUM, AVG, MAX, MIN, COUNT
         その他
             binning:　連続値の場合に、ある特定のレンジを決めて、レンジごとにカテゴリを分ける手法
             Trendlines:　「売上総額」を特徴量にするのではなくて「先週の売上」「先月の売上」「過去10年の売上」など「傾向」をモデルに与える
     説明変数複数
-        Interaction:　四則演算
+        Interaction:　四則演算、余剰、絶対値、三角関数、丸め(四捨五入，切り捨て，天井関数，床関数)、、指数関数、対数(自然対数，常用対数)、べき乗、平方根、円周率、符号
         非線形変換することで線形モデルへの当てはまりを良くする方法:
             多項式カーネル
             leafcoding
@@ -55,13 +56,17 @@
         imputation:　欠損値補完（平均など）
 
 時間変数:
-    循環的な変換: 週、月の日付のように循環する数値を, 円の座標のように循環する2つの変数に置き換える
+    循環的な変換: 週、月の日付、曜日のように循環する数値を, 円の座標のように循環する2つの変数に置き換える
     トレンドを取り出す: 例えば購入額の総計を, 週末の値, 月末の値などにすると, 総額が同じでも購入額が増えていく顧客と減っていく顧客を区別できる
     大きなイベントからの距離:    祝日の何日前/後かを表す特徴量を作る
     過去データ:
 
 空間変数:
     GPS座標、都市、国や地域、住所など
+
+共通:
+    ドメイン知識を活用: part1-4, part5-7で分ける。
+    距離:
 
 その他:
     Consolidation encoding:　名寄せ
@@ -73,5 +78,5 @@
 # 参考
 [特徴量エンジニアリング備忘録](https://qiita.com/risako_/items/91ea7f34433bfa2ea40c)  
 [Target Encoding のやり方について](https://blog.amedama.jp/entry/target-mean-encoding-types)  
-[HJvanVeenの『特徴量エンジニアリング』註解](https://qiita.com/s_katagiri/items/492f86529f3c02905e76)
-
+[HJvanVeenの『特徴量エンジニアリング』註解](https://qiita.com/s_katagiri/items/492f86529f3c02905e76)  
+[機械学習エンジニアの奥義、特徴量エンジニアリングについて調べてみた](https://aizine.ai/feature-engineering0612/#toc6)

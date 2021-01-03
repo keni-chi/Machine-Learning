@@ -45,6 +45,10 @@
     備考：/home配下にユーザ毎にディレクトリあり。
 
 
+## 実行結果のスクロールバー
+[セル]> [すべての出力]> [スクロールの切り替え](メニューバー上)に移動すると、出力はスクロールなしに戻る
+
+
 
 ## 参考
 [解析環境をJupyterLab+hub-extensionでマルチユーザー化した](https://jun-systems.info/articles/jupyterlab-multi-user/)  

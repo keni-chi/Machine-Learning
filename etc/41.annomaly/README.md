@@ -43,3 +43,8 @@
 [最も簡単な異常検知の手法-ホテリングのT2 理論](https://masamunetogetoge.com/hotelling-t2)  
 [T二乗法](http://harmonizedai.com/article/t%E4%BA%8C%E4%B9%97%E6%B3%95/)  
 [Pythonでお手軽・異常検知 [ホテリング理論編]](https://qiita.com/Zepprix/items/f6a5de2e3f6689bd2c1f)  
+
+
+### scipy.statsのintervalとppf 
+[scipy.statsのメソッドまとめ](https://ai-soldier.work/scipy-stats-method/#toc_id_3_2)  
+[intervalが正しそう](https://www.kabuku.co.jp/developers/anomaly-detect)  

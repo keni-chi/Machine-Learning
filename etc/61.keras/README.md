@@ -58,5 +58,5 @@ Object Detection with RetinaNet
 [Keras チュートリアル](https://qiita.com/sasayabaku/items/64a01363bcd5c44feb0b)  
 [脳死で覚えるkeras入門](https://qiita.com/wataoka/items/5c6766d3e1c674d61425)
 [kears_Code examples_(公式)](https://keras.io/examples/)  
-
+[【Python】KerasでVGG16を使って画像認識をしてみよう！](https://www.y-shinno.com/keras-vgg16/)  
 

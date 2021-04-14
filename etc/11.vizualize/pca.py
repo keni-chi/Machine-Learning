@@ -16,6 +16,7 @@ plt.xlabel("petalLength")
 plt.ylabel("petalWidth")
 plt.show()
 
+print('PCA--------------------------------start')
 # 主成分分析を実施
 pca = PCA(n_components=2).fit(data)
 X_transformed = pca.transform(data)
@@ -30,8 +31,27 @@ fig = plt.figure()
 features = X_transformed[:, [0, 1]]
 plt.scatter(*features.T, c=[['orange', 'green', 'blue'][x] for x in iris.target])
 plt.show()
+# plt.savefig('pca1.png')
 
-print('--------------------------------')
+
+print('白色化--------------------------------start')
+# 主成分分析を実施
+pca = PCA(n_components=2, whiten=True).fit(data)
+X_transformed = pca.transform(data)
+
+# 色を分けて可視化する場合
+features = iris.data[:, [0, 2]]
+plt.scatter(*features.T, c=[['orange', 'green', 'blue'][x] for x in iris.target])
+plt.show()
+
+# 処理後に可視化する場合
+fig = plt.figure()
+features = X_transformed[:, [0, 1]]
+plt.scatter(*features.T, c=[['orange', 'green', 'blue'][x] for x in iris.target])
+plt.show()
+# plt.savefig('pca2.png')
+
+print('PCA(components=3)--------------------------------start')
 
 # x
 pca = PCA(n_components=3).fit(data)

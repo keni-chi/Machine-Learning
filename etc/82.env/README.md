@@ -30,3 +30,4 @@ jupyter notebook
 ------------------
 
 ## 参考
+[Windows10 - 仮想メモリの設定・サイズ変更（カスタマイズ）](https://pc-karuma.net/windows-10-page-file-settings/)  

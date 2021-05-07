@@ -31,3 +31,5 @@ GPUメモリの利用状況
 [【秒速で無料GPUを使う】深層学習実践Tips on Colaboratory](https://qiita.com/tomo_makes/items/b3c60b10f7b25a0a5935)
 [環境構築不要でPython入門！Google Colaboratoryの使い方を分かりやすく説明](https://cpp-learning.com/python_colaboratory/)  
 [【秒速で無料GPUを使う】TensorFow(Keras)/PyTorch/Chainer環境構築 on Colaboratory](https://qiita.com/tomo_makes/items/f70fe48c428d3a61e131)
+[google colaboratoryでcsvファイルの読み込み](http://hirotaka-hachiya.hatenablog.com/entry/2019/06/09/231411)  
+[Google ColaboratoryでGoogle Drive上の.pyファイルをインポート](https://qiita.com/Kunikata/items/45e731753e97bda28aab)  

@@ -7,3 +7,4 @@
 [python - RGB画像(3チャネル)をグレースケール(1チャネル)に変換して保存する方法は？](https://cloud6.net/so/python/3052021)   
 [Keras - Keras の ImageDataGenerator を使って学習画像を増やす](https://pynote.hatenablog.com/entry/keras-image-data-generator)  
 [【ミニバッチ学習と学習率】低バッチサイズから始めよ](https://dajiro.com/entry/2020/04/15/221414)  
+[Kaggle Digit Recognizer にCNNで挑戦、公開Kernelの中で最高精度を目指す](https://qiita.com/corochann/items/e83029d1ad94d908e220)    

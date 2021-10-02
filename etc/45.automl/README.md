@@ -1,4 +1,4 @@
-## インストール
+## tpotインストールのためのxgboostインストール
 
 git clone --recursive http://github.com/dmlc/xgboost
 
@@ -21,7 +21,7 @@ https://cmake.org/download/　にてzipをダウンロード
 https://qiita.com/piacerex/items/4d6d234dc0fb66bbb592
 
 
-2019の場合、cmakeのコマンドは以下でやるとOK（参考：https://xgboost.readthedocs.io/en/latest/build.html#installing-the-development-version-with-visual-studio-windows）
+2019の場合、cmakeのコマンドは以下でやるとOK（参考：https://xgboost.readthedocs.io/en/latest/build.html#installing-the-development-version-with-visual-studio-windows）※管理者でcmdは不要だった
 cmake .. -G"Visual Studio 16 2019" -A x64
 
 開発者コマンドプロンプトを起動

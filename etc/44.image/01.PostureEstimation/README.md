@@ -10,4 +10,5 @@
 [初級編：colaboratory、openposeで簡単動画の姿勢推定](https://qiita.com/sugup/items/ebe1c0783f5c4db330d0)  
 [google colab example1](https://colab.research.google.com/github/tugstugi/dl-colab-notebooks/blob/master/notebooks/OpenPose.ipynb)  
 [google colab example2](https://colab.research.google.com/github/miu200521358/motion_trace_colab/blob/master/Openpose1_6_0.ipynb)  
+[高精度な手足、身体の姿勢推定API「MediaPipe」を使って体の姿勢を数値化させてみる](https://arkouji.cocolog-nifty.com/blog/2021/01/post-eca45d.html)   
 

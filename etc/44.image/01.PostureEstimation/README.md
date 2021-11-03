@@ -12,3 +12,7 @@
 [google colab example2](https://colab.research.google.com/github/miu200521358/motion_trace_colab/blob/master/Openpose1_6_0.ipynb)  
 [高精度な手足、身体の姿勢推定API「MediaPipe」を使って体の姿勢を数値化させてみる](https://arkouji.cocolog-nifty.com/blog/2021/01/post-eca45d.html)   
 
+# 手姿勢推定
+[人物画像処理 ACCULUS POSE](https://acculus.jp/acculuspose/)  
+[手の姿勢推定／ジェスチャー認識](https://note.com/shu223/n/nd8cb64a32886)  
+

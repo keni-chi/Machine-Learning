@@ -17,3 +17,6 @@
 
 ### 論文
 [表情推定](https://www.jstage.jst.go.jp/article/pjsai/JSAI2021/0/JSAI2021_3E2OS5b01/_pdf/-char/ja)  
+
+### 音声
+[基本周波数をlibrosaで簡単に測定する【Python】](https://self-development.info/%E5%9F%BA%E6%9C%AC%E5%91%A8%E6%B3%A2%E6%95%B0%E3%82%92librosa%E3%81%A7%E7%B0%A1%E5%8D%98%E3%81%AB%E6%B8%AC%E5%AE%9A%E3%81%99%E3%82%8B%E3%80%90python%E3%80%91/)

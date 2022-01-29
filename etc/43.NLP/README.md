@@ -116,3 +116,8 @@ GPT-3
 [自然言語処理でBERTまでの流れを簡単に紹介](https://nmoriyama.hatenablog.com/entry/2020/01/24/160351)  
 [自然言語処理の王様「BERT」の論文を徹底解説](https://qiita.com/omiita/items/72998858efc19a368e50)
 [「GPT-3」は思ってたより「やばい」ものだった](https://cubeglb.com/media/2020/07/22/gpt-3-gamechanger/)  
+
+
+## 感情分析
+[ML-Askでテキストの感情分析](https://qiita.com/yukinoi/items/ef6fb48b5e3694e9659c)  
+[Pythonで日本語の感情分析(Google Colab)](https://qiita.com/konitech913/items/317b452cc6c63894fce3)  

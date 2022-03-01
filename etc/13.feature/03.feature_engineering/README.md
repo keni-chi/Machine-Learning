@@ -99,4 +99,5 @@
 [特徴量エンジニアリング備忘録](https://qiita.com/risako_/items/91ea7f34433bfa2ea40c)  
 [Target Encoding のやり方について](https://blog.amedama.jp/entry/target-mean-encoding-types)  
 [HJvanVeenの『特徴量エンジニアリング』註解](https://qiita.com/s_katagiri/items/492f86529f3c02905e76)  
-[機械学習エンジニアの奥義、特徴量エンジニアリングについて調べてみた](https://aizine.ai/feature-engineering0612/#toc6)
+[機械学習エンジニアの奥義、特徴量エンジニアリングについて調べてみた](https://aizine.ai/feature-engineering0612/#toc6)  
+[p値を用いたTarget Encoding](https://kuruton.hatenablog.com/entry/2022/02/24/092716?utm_campaign=Weekly%20Kaggle%20News&utm_medium=email&utm_source=Revue%20newsletter)  

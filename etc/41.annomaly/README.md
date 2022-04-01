@@ -34,6 +34,7 @@
 [【信号処理入門】機械学習未使用！Hampelフィルタで外れ値検出（異常検知） -Python-](https://cpp-learning.com/hampel-filter/)  
 [Pythonで高速フーリエ変換（FFT）の練習-1 簡単な信号でFFTを体験してみよう](https://momonoki2017.blogspot.com/2018/03/pythonfft-1-fft.html)  
 [【python】sklearnのOneClassSVMを使って外れ値検知してみる](https://www.haya-programming.com/entry/2018/12/14/111126)  
+[異常検知入門と手法まとめ](https://qiita.com/toucan/items/c3343de3cfa236df3bda#probability-approach)  
 
 ### 密度比
 [異常検知と変化検知のまとめ　数式なし](https://qiita.com/GushiSnow/items/f032806cfa8cec046318)  

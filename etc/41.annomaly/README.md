@@ -52,3 +52,7 @@
 ### scipy.statsのintervalとppf 
 [scipy.statsのメソッドまとめ](https://ai-soldier.work/scipy-stats-method/#toc_id_3_2)  
 [intervalが正しそう](https://www.kabuku.co.jp/developers/anomaly-detect)  
+
+
+### VAE
+[VAEの異常検知の精度向上を考える](https://qiita.com/maharuda/items/9e9ef8ab021a2cb18573)  

@@ -60,3 +60,5 @@ Object Detection with RetinaNet
 [kears_Code examples_(公式)](https://keras.io/examples/)  
 [【Python】KerasでVGG16を使って画像認識をしてみよう！](https://www.y-shinno.com/keras-vgg16/)  
 
+# fine tuning
+[kerasのfashion_mnistで転移学習](https://snova301.hatenablog.com/entry/2019/05/26/203003)  

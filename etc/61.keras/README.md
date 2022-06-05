@@ -62,3 +62,5 @@ Object Detection with RetinaNet
 
 # fine tuning
 [kerasのfashion_mnistで転移学習](https://snova301.hatenablog.com/entry/2019/05/26/203003)  
+[KerasでVGG16のファインチューニングを試してみる](https://qiita.com/ps010/items/dee9413d3de28de7d2f9)  
+[【MNIST】ImangeNetのモデルを利用してFineTuningやってみた【効率的な高精度モデルの構築】](https://qiita.com/PoodleMaster/items/a98344e22327130791d8)  

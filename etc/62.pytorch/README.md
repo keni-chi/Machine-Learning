@@ -20,6 +20,9 @@ pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/wh
 [【PyTorchチュートリアル①】What is PyTorch?](https://qiita.com/sudominoru/items/544aec4dc867187a93fa)  
 [What is torch.nn really? の和訳](https://qiita.com/maskot1977/items/8855b7fdb1c52f7ced1e)   
 
-- 実装
+## 実装
 [ディープラーニングの基礎（PyTorch）](https://www.kikagaku.ai/tutorial/basic_of_deep_learning/learn/pytorch_basic)  
 [PyTorch練習](http://37ma5ras.blogspot.com/2017/09/mit-ocw-theano-02.html)  
+
+## TorchServe
+[TorchServe を使用して Pytorch のディープラーニングモデルをホストしてみた](https://qiita.com/ground0state/items/686bf235bd684f11a1d2#%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E7%AE%A1%E7%90%86)  

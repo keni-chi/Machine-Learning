@@ -15,4 +15,5 @@ df_out.head()
 
 ## 参考
 [TimeGAN colab](https://colab.research.google.com/github/ydataai/ydata-synthetic/blob/master/examples/timeseries/TimeGAN_Synthetic_stock_data.ipynb)
-[TimeGAN github](https://github.com/ydataai/ydata-synthetic)  
+[TimeGAN github](https://github.com/ydataai/ydata-synthetic)   
+[時系列データ生成RTSGANの実装方法](http://blog.livedoor.jp/tak_tak0/archives/52439130.html)  

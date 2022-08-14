@@ -22,3 +22,7 @@ df_out.head()
 [PyTorchによるTadGAN（時系列異常検知）](https://zenn.dev/yonda/articles/681f32264341cf)  
 [tadgan arxiv](https://arxiv.org/pdf/2009.07769.pdf)  
 [tadgan 記事](https://engineer.fabcross.jp/archeive/210122_hidden-warning-signals.html)  
+
+
+## 補完
+[深層学習を用いた時系列補間技術の非画像データへの適用性評価](https://www.mss.co.jp/technology/report/pdf/29_01.pdf)

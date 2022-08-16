@@ -18,6 +18,9 @@ df_out.head()
 [TimeGAN github](https://github.com/ydataai/ydata-synthetic)   
 [時系列データ生成RTSGANの実装方法](http://blog.livedoor.jp/tak_tak0/archives/52439130.html)  
 [時系列にもGAN](https://ai-scholar.tech/articles/time-series/GAN_for_time-series)  
+
+## 異常検知GAN
+[敵対的生成ネットワークを用いた時系列データの異常検知への取り組み](https://db-event.jpn.org/deim2019/post/papers/154.pdf)  
 [tadgan異常検知](https://github.com/arunppsg/TadGAN)  
 [PyTorchによるTadGAN（時系列異常検知）](https://zenn.dev/yonda/articles/681f32264341cf)  
 [tadgan arxiv](https://arxiv.org/pdf/2009.07769.pdf)  

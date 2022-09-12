@@ -23,3 +23,9 @@
 
 ### 動画
 [iphoneで撮影した動画から心拍数を抽出してみた](https://qiita.com/fya-hiro/items/8e428d2aa24288bac737)  
+[映像からの脈波情報抽出](https://www.sairct.idac.tohoku.ac.jp/wp-content/uploads/2016/07/160728_c2_yoshizawa_DLpre2.pdf)  
+[webカメラで脈拍計測](https://is-ai.jp/?p=242)  
+[顔の画像からリアルタイムに脈拍を計測する技術を開発](https://pr.fujitsu.com/jp/news/2013/03/18.html)  
+[生体情報センシングと人の状態推定への応用](https://tech-seminar.jp/publication/%E7%94%9F%E4%BD%93%E6%83%85%E5%A0%B1%E3%82%BB%E3%83%B3%E3%82%B7%E3%83%B3%E3%82%B0%E3%81%A8%E4%BA%BA%E3%81%AE%E7%8A%B6%E6%85%8B%E6%8E%A8%E5%AE%9A%E3%81%B8%E3%81%AE%E5%BF%9C%E7%94%A8)  
+
+

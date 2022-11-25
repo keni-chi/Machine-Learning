@@ -1,7 +1,3 @@
-# 参考
-# https://qiita.com/jabberwocky0139/items/a9751d11caa64bc19226
-# https://kimamani89.com/2019/06/17/post-798/
-
 from matplotlib import pyplot as plt
 import pandas as pd
 import numpy as np

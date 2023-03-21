@@ -56,3 +56,6 @@
 
 ### VAE
 [VAEの異常検知の精度向上を考える](https://qiita.com/maharuda/items/9e9ef8ab021a2cb18573)  
+
+### 異常検知・変化点検知
+[統計的異常検知/変化検知の基本をまとめる](https://www.procrasist.com/entry/21-anomaly-detection)  

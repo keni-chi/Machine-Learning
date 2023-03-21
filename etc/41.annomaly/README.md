@@ -59,3 +59,4 @@
 
 ### 異常検知・変化点検知
 [統計的異常検知/変化検知の基本をまとめる](https://www.procrasist.com/entry/21-anomaly-detection)  
+[LSTMによる時系列データの異常検知](https://www.renom.jp/ja/notebooks/tutorial/time_series/lstm-anomalydetection/notebook.html)  

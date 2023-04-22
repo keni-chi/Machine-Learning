@@ -1,0 +1,7 @@
+pandas
+numpy
+matplotlib
+selenium==4.4
+webdriver-manager
+pandas_datareader
+scikit-learn

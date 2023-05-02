@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
+import os
 
 
 # # サンプルデータ
@@ -87,26 +88,33 @@ km = KMeans(n_clusters=30,    # クラスターの個数
             random_state=0)          # セントロイドの初期化に用いる乱数発生器の状態
 y_km = km.fit_predict(X_std)
 
+
 # codeとクラスタの対応
 df_map = X.copy()
 df_map['class'] = y_km
 df_map = df_map[['class']]
-print(df_map)
+df_map_csv = df_map.reset_index()
+print(df_map_csv)
+df_map_csv = df_map_csv.rename({'index': 'コード'}, axis=1)
+print(df_map_csv)
+df_ext = pd.read_csv('./dataset/data_j_extract.csv', encoding='shift_jis')
+df_ext = pd.merge(df_ext, df_map_csv, on='コード', how='inner')
+df_ext.to_csv(os.path.dirname(__file__) + '/kmeans/df_ext.csv', encoding='shift_jis')
 
 
 # グラフ描画
 df_plt = X.T
-print(df_plt)
+# print(df_plt)
 for n_cluster in range(30):
-    print(n_cluster)
+    # print(n_cluster)
     df_target = df_map[df_map['class'] == n_cluster]
     code_list = df_target.index.tolist()
-    print(code_list)
+    # print(code_list)
 
     # クラスタ毎に絞り込み
     df_clster_n = df_plt[code_list]
-    print('A01')
-    print(df_clster_n)
+    # print('A01')
+    # print(df_clster_n)
 
 
     df_clster_n.plot()
@@ -124,3 +132,6 @@ for n_cluster in range(30):
 
     # ax2.plot(df.index, df['value02'], color='r')
     # plt.show()
+
+
+

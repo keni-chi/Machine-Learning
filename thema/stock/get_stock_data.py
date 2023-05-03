@@ -16,7 +16,11 @@ end = dt.date.today()
 
 def get_stock_data():
     for ticker_symbol in target_no_list:
+        # 続きのコードからdownload設定
+        if ticker_symbol <= 2323:
+            continue
         print(ticker_symbol)
+
         for i in range(3):
             try:
                 # コード

@@ -9,6 +9,10 @@ def make_month():
     df_dataset = pd.DataFrame()
 
     for path in path_list:
+        # code
+        code = path.split('_')[1].split('.')[0]
+        print(code)
+
         df = pd.read_csv(path)
         if len(df) == 0:
             continue
@@ -20,10 +24,10 @@ def make_month():
 
         # 株価絞り込み
         df_temp =df.copy()
-        df_temp = df_temp[df_temp['Date'] > dt.datetime(2023,4,20)]
+        df_temp = df_temp[df_temp['Date'] >= dt.datetime(2023,4,20)]
         df_temp = df_temp[df_temp['Close'] < 5000]
         if len(df_temp)==0:
-            # print('5000円以上なのでskip')
+            print('5000円以上なのでskip')
             continue
 
         # 1カ月平均
@@ -46,12 +50,10 @@ def make_month():
         if (m_now >= m_halfy) and (m_now >= m_1y) and (m_now >= m_2y):
             print('上昇トレンド')
         else:
-            # print('上昇トレンドではないのでskip')
+            print('上昇トレンドではないのでskip')
             continue
 
         # 出力
-        code = path.split('_')[1].split('.')[0]
-        print(code)
         # print(df_m.head())
         df_m.to_csv( os.path.dirname(__file__) + '/data_month/m_stock_'+ code + '.csv')
         df_dataset[code] = df_m['Close']

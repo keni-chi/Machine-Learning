@@ -62,3 +62,7 @@
 ### 相関係数
 [【統計学】相関係数の検定（RとPython）](http://midsum-datasience.hatenablog.com/entry/2018/07/08/171113)  
 [相関係数の検定(無相関検定)(notebookの一部)](http://lang.sist.chukyo-u.ac.jp/classes/PythonProbStat/Python-statistics4.html#RS04:correlationTest)
+
+
+### 回帰診断図
+[回帰診断図](https://yosshiblog.jp/%E5%9B%9E%E5%B8%B0%E8%A8%BA%E6%96%AD%E5%9B%B3/#Residuals_vs_Fitted)  

@@ -5,7 +5,7 @@ import datetime as dt
 
 
 def make_month():
-    path_list = glob.glob('./data/*.csv')
+    path_list = glob.glob('./data20230401/*.csv')
     df_dataset = pd.DataFrame()
 
     for path in path_list:
@@ -55,7 +55,7 @@ def make_month():
 
         # 出力
         # print(df_m.head())
-        df_m.to_csv( os.path.dirname(__file__) + '/data_month/m_stock_'+ code + '.csv')
+        df_m.to_csv('./data_month/m_stock_'+ code + '.csv')
         df_dataset[code] = df_m['Close']
     return df_dataset
 
@@ -70,6 +70,10 @@ def make_code_list(df_dataset):
     print(df.info())
     print(code_list)
     df = df[df['コード'].isin(code_list)]
+
+    # 国内株に絞り込み
+    df = df[(df['市場・商品区分']=='プライム（内国株式）')|(df['市場・商品区分']=='スタンダード（内国株式）')|(df['市場・商品区分']=='グロース（内国株式）')]
+
     df.to_csv(os.path.dirname(__file__) + '/dataset/data_j_extract.csv', encoding='shift_jis')
 
 

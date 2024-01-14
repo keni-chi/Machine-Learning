@@ -5,8 +5,8 @@ import datetime as dt
 
 
 def concat_data():
-    path_list = glob.glob('./data_raw/*.csv')
-    path_diff_list = glob.glob('./data_20230401/*.csv')
+    path_list = glob.glob('./dataraw/*.csv')
+    path_diff_list = glob.glob('./data_20230401_diff/*.csv')
     for path_diff in path_diff_list:
         file_diff = path_diff.split('\\')[1]
         for path in path_list:
@@ -18,6 +18,8 @@ def concat_data():
             df_org = pd.read_csv(path)
             df_diff = pd.read_csv(path_diff)
 
+            if int(stock_code.split('_')[1]) <= 9000:
+                continue
             if len(df_org)==0:
                 continue
             elif len(df_diff)!=0:
@@ -27,7 +29,7 @@ def concat_data():
                     ignore_index=True
                 )
                 df = df.drop_duplicates().sort_values('Date').reset_index(drop=True)
-            df.to_csv( os.path.dirname(__file__) + '/data/'+ stock_code + '.csv')
+            df.to_csv( os.path.dirname(__file__) + '/data_20230401/'+ stock_code + '.csv')
 
 
 def main():

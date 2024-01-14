@@ -5,20 +5,23 @@ import pandas as pd
 import time
 
 # コード
-df = pd.read_csv('data_j.csv', usecols=[0, 1], encoding='shift_jis')
+df = pd.read_csv('data_j_prime.csv', usecols=[0, 1], encoding='shift_jis')
 print(df)
 target_no_list = df['コード'].tolist()
 
 #2022-01-01以降の株価取得
-start='2010-01-01'
+start='2013-01-01'
 end = dt.date.today()
 
 
 def get_stock_data():
     for ticker_symbol in target_no_list:
         # 続きのコードからdownload設定
-        if ticker_symbol <= 2323:
+        if ticker_symbol <= 4021:  #4021
             continue
+        # if ticker_symbol >= 90000:
+        #     continue
+
         print(ticker_symbol)
 
         # コード
@@ -30,7 +33,7 @@ def get_stock_data():
         #2列目に銘柄コード追加
         df.insert(0, "code", ticker_symbol, allow_duplicates=False)
         #csv保存
-        df.to_csv( os.path.dirname(__file__) + '/data/stock_'+ ticker_symbol + '.csv')
+        df.to_csv( os.path.dirname(__file__) + '/data_20230816/stock_'+ ticker_symbol + '.csv')
 
         time.sleep(2)
 

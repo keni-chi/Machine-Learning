@@ -166,7 +166,7 @@ def custer_kmeans_day():
     df_map_csv['コード'] = df_map_csv['コード'].astype(int)
     print(df_map_csv)
     print(df_map_csv.info())
-    df_ext = pd.read_csv('./data_j.csv', encoding='shift_jis')   #TODO: 切り替え
+    df_ext = pd.read_csv('./data_j_prime.csv', encoding='shift_jis')   #TODO: 切り替え
     # df_ext = pd.read_csv('./dataset/data_j_extract.csv', encoding='shift_jis')
 
     # 配当利回り情報列を追加

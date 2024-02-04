@@ -90,6 +90,17 @@ def aggregate_accumulation():
     # 出力
     df_acc.to_csv(f'simulate_{simulate_conf.RUNDATE}/df_acc.csv', encoding='shift-jis')
 
+    # フィルタ処理
+    df_acc_f = df_acc.copy()
+    df_acc_f = df_acc_f[(df_acc_f['6month_a']>=3)&(df_acc_f['6month_a']<=15)]
+    df_acc_f = df_acc_f[(df_acc_f['1month_a']>=3)&(df_acc_f['1month_a']<=15)]
+    df_acc_f = df_acc_f[(df_acc_f['2week_a']>=3)&(df_acc_f['2week_a']<=15)]
+    df_acc_f = df_acc_f[df_acc_f[simulate_conf.RUNDATE]>=0]
+    df_acc_f = df_acc_f.sort_values('6month_mape')
+
+    # 出力
+    df_acc_f.to_csv(f'simulate_{simulate_conf.RUNDATE}/df_acc_f.csv', encoding='shift-jis')
+
 
 def main():
     # codeリストを取得

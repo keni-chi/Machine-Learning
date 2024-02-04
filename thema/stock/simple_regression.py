@@ -54,8 +54,15 @@ def fit_predict(df):
     df_2year = simple_reg(df_2year, interval)
     df_dataset['2year_a'] = df_2year['a']
     df_dataset['2year_mape'] = df_6month['mape']
-
     print(df_dataset.info())
+
+    # 前日との終値の増減率を算出 #######
+    df_latest_ratio = calc_latest(df)
+    df_dataset['day1_ratio'] = df_latest_ratio['day1_ratio']
+    df_dataset['day2_ratio'] = df_latest_ratio['day2_ratio']
+    df_dataset['day3_ratio'] = df_latest_ratio['day3_ratio']
+    df_dataset['day4_ratio'] = df_latest_ratio['day4_ratio']
+    df_dataset['day5_ratio'] = df_latest_ratio['day5_ratio']
 
     # 結果の結合
     df = pd.read_csv(f'{sub_folder}/df_ext.csv', index_col=0, encoding='shift-jis')
@@ -74,6 +81,43 @@ def fit_predict(df):
     df_dataset_up = df_dataset_up[df_dataset_up['2year_a'] > 0]
     df_dataset_up = df_dataset_up.sort_values(by=['2year_mape', '6month_mape', '1month_mape', '2week_mape'])
     df_dataset_up.to_csv(f'simple_reg_{simulate_conf.RUNDATE}/df_dataset_up.csv', encoding='shift-jis')
+
+
+def calc_latest(df):
+    df = df.tail(6).reset_index(drop=True).drop('Date', axis=1)
+    code_list, day1_ratio_list, day2_ratio_list, day3_ratio_list = [], [], [], []
+    day4_ratio_list, day5_ratio_list = [], []
+
+    for code, item in df.items():
+        y = item.tolist()
+        day1_ratio = (y[5] - y[4]) / y[4] * 100
+        day2_ratio = (y[4] - y[3]) / y[3] * 100
+        day3_ratio = (y[3] - y[2]) / y[2] * 100
+        day4_ratio = (y[2] - y[1]) / y[1] * 100
+        day5_ratio = (y[1] - y[0]) / y[0] * 100
+
+        # 結果の保存
+        code_list.append(code)
+        day1_ratio_list.append(day1_ratio)
+        day2_ratio_list.append(day2_ratio)
+        day3_ratio_list.append(day3_ratio)
+        day4_ratio_list.append(day4_ratio)
+        day5_ratio_list.append(day5_ratio)
+
+    # 結果
+    df_latest_ratio = pd.DataFrame({
+        'code':code_list,
+        'day1_ratio':day1_ratio_list,
+        'day2_ratio':day2_ratio_list,
+        'day3_ratio':day3_ratio_list,
+        'day4_ratio':day4_ratio_list,
+        'day5_ratio':day5_ratio_list
+    })
+
+    # 出力
+    df_latest_ratio.to_csv(f'simple_reg_{simulate_conf.RUNDATE}/df_latest_ratio.csv', encoding='shift-jis')
+
+    return df_latest_ratio
 
 
 def simple_reg(df, interval):

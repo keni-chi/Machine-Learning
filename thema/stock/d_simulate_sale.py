@@ -8,14 +8,16 @@ import d_simulate_conf
 
 class Sale():
 
-    def __init__(self, df_raw, code):
+    def __init__(self, df_raw, code, ts):
         self.df_raw = df_raw
         self.code = code
-
+        self.ts = ts
 
     def run(self):
         # df_startを読み込み
-        df_start = pd.read_csv(f'd_simulate_{d_simulate_conf.RUNDATE}/{str(self.code)}/df_start.csv', index_col=0, encoding='shift-jis')
+        df_start = pd.read_csv(f'./d_simulate_{d_simulate_conf.RUNDATE}{d_simulate_conf.suffix}/{str(self.code)}/{self.ts}/df_start.csv', index_col=0, encoding='shift-jis')
+        print('B001')
+        print(df_start)
 
         # 保管変数
         sale_date_list = []
@@ -37,10 +39,10 @@ class Sale():
             df_future['timestamp'] = pd.to_datetime(df_future['timestamp'])
             df_future = df_future.set_index('timestamp')
             df_future = df_future[d:]
-            # # 先頭1データを削除  （同じ日時で損益０となるのは、仕様であったため、コメントアウト）
-            # df_future = df_future.reset_index()
-            # df_future = df_future[1:]
-            # df_future = df_future.set_index('timestamp')
+            # 60分先のみで売却
+            df_future = df_future.reset_index()
+            df_future = df_future.head(60)
+            df_future = df_future.set_index('timestamp')
 
             # up: df_futureに対し、Highの値がup以上でフィルタdf_up。先頭日付をup_date変数に格納。
             df_up = df_future[df_future['High'] >= up_v].head(1).reset_index()
@@ -116,10 +118,10 @@ class Sale():
         df_soneki['days'] = (df_soneki['date2'] - df_soneki['date1'])
         df_soneki['days'] = (df_soneki['days'] / timedelta(days=1))
         df_soneki = df_soneki.drop(['date1', 'date2'], axis=1)
-        df_soneki.to_csv(f'd_simulate_{d_simulate_conf.RUNDATE}/{str(self.code)}/df_soneki.csv', encoding='shift-jis')
+        df_soneki.to_csv(f'./d_simulate_{d_simulate_conf.RUNDATE}{d_simulate_conf.suffix}/{str(self.code)}/{self.ts}/df_soneki.csv', encoding='shift-jis')
 
         # 単純な合計でトータル損益を求めて、csv保存
         total_soneki = df_soneki['損益'].sum()
         df_total_soneki = pd.DataFrame(data={str(self.code): [total_soneki]})
-        df_total_soneki.to_csv(f'd_simulate_{d_simulate_conf.RUNDATE}/{str(self.code)}/df_total_soneki.csv', encoding='shift-jis')
+        df_total_soneki.to_csv(f'./d_simulate_{d_simulate_conf.RUNDATE}{d_simulate_conf.suffix}/{str(self.code)}/{self.ts}/df_total_soneki.csv', encoding='shift-jis')
         print(total_soneki)

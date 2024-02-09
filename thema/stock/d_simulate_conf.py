@@ -1,7 +1,14 @@
-RUNDATE = '20240119'
+import datetime
+
+t_delta = datetime.timedelta(hours=9)
+JST = datetime.timezone(t_delta, 'JST')
+now = datetime.datetime.now(JST)
+
+# RUNDATE = now.strftime('%Y%m%d')
+RUNDATE = '20240208'
 LATESTDATE = '20231229'
 
-DATASET_DAYS = 60*5*2  # 2日
+DATASET_DAYS = 60  # 2日
 
 
 # ---パラメータメモ---
@@ -12,9 +19,9 @@ DATASET_DAYS = 60*5*2  # 2日
 
 # ---sale
 # 利益確定は1.1倍か
-rikaku_ratio = 1 + 0.01*0.8
+rikaku_ratio = 1 + 0.01*1.0
 # 損切は0.95倍か
-songiri_ratio = 1 - 0.01*0.4
+songiri_ratio = 1 - 0.01*0.5
 # 
 # 
-# 
+suffix = '-rikaku-' + str(rikaku_ratio)

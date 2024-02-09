@@ -1,4 +1,11 @@
-RUNDATE = '20240124'
+import datetime
+
+t_delta = datetime.timedelta(hours=9)
+JST = datetime.timezone(t_delta, 'JST')
+now = datetime.datetime.now(JST)
+
+RUNDATE = now.strftime('%Y%m%d')
+# RUNDATE = '20240124'
 LATESTDATE = '20231229'
 
 DATASET_DAYS = 6*20

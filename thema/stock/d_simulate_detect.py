@@ -7,9 +7,10 @@ import d_simulate_conf
 
 class Detect():
 
-    def __init__(self, df_raw, code):
+    def __init__(self, df_raw, code, ts):
         self.df_raw = df_raw
         self.code = code
+        self.ts = ts
 
     def simple_reg(self, df):
         X = pd.DataFrame(data={'x': df.index.tolist()})
@@ -24,7 +25,7 @@ class Detect():
 
         # 6か月分+5日のデータセットのループ(例： 6*20+5=125)
         loop_times = len(df_raw) - d_simulate_conf.DATASET_DAYS + 1
-        df_coef = pd.DataFrame(columns=['timestamp', '10m', '20m', '1d', '2d'])
+        df_coef = pd.DataFrame(columns=['timestamp', '5m', '15m', '30m', '60m'])
         for i in range(loop_times):
             # print(f'---loop_{i}---')
             df = df_raw[i:i+d_simulate_conf.DATASET_DAYS]
@@ -35,42 +36,40 @@ class Detect():
             # print(tail_date)
 
             # 関数：dfを入力し、単回帰のaを計算を出力
-            df_2week = df.tail(10)
+            df_2week = df.tail(5)
             a_2week = self.simple_reg(df_2week)
 
-            df_1month = df.tail(20)
+            df_1month = df.tail(15)
             a_1month = self.simple_reg(df_1month)
 
-            df_6month = df.tail(60*5)
+            df_6month = df.tail(30)
             a_6month = self.simple_reg(df_6month)
 
-            df_2year = df.tail(60*5*2)
+            df_2year = df.tail(60)
             a_2year = self.simple_reg(df_2year)
 
             df_temp = pd.DataFrame(
                 {
                  'timestamp': [tail_date],
-                 '10m': a_2week, 
-                 '20m': a_1month, 
-                 '1d': a_6month, 
-                 '2d': a_2year}
+                 '5m': a_2week, 
+                 '15m': a_1month, 
+                 '30m': a_6month, 
+                 '60m': a_2year}
             )
 
             # 末尾の日付とaをdfのレコードとして追加
             df_coef = pd.concat([df_coef, df_temp])
 
         # 出力
-        df_coef.to_csv(f'd_simulate_{d_simulate_conf.RUNDATE}/{str(self.code)}/df_coef.csv', encoding='shift-jis')
+        df_coef.to_csv(f'./d_simulate_{d_simulate_conf.RUNDATE}{d_simulate_conf.suffix}/{str(self.code)}/{self.ts}/df_coef.csv', encoding='shift-jis')
 
         return df_coef
 
     def buy_flg(self, df):
         # 傾きの条件でフラグを立てる
         df_filter = df[
-            (df['10m']>0)
-            &(df['20m']>0)
-            &(df['1d']>0)
-            &(df['2d']>0)]
+            (df['15m']>0)
+            &(df['30m']>0)]
         # df_filter['flg'] = 1
         df_filter = df_filter.assign(flg=1)
         df_filter = df_filter[['timestamp', 'flg']]
@@ -88,14 +87,14 @@ class Detect():
         df_buy = df_buy.drop(['back_1', 'back_2', 'back_3', 'back_4', 'flg_sum'], axis=1)
 
         # 出力
-        df_buy.to_csv(f'd_simulate_{d_simulate_conf.RUNDATE}/{str(self.code)}/df_buy.csv', encoding='shift-jis')
+        df_buy.to_csv(f'./d_simulate_{d_simulate_conf.RUNDATE}{d_simulate_conf.suffix}/{str(self.code)}/{self.ts}/df_buy.csv', encoding='shift-jis')
 
     def run(self):
         # 係数のデータセットを作成
         df_coef = self.calc_coef()
         # # debug
         # time.sleep(2)
-        # df_coef = pd.read_csv(f'd_simulate_{d_simulate_conf.RUNDATE}/{str(self.code)}/df_coef.csv', index_col=0, encoding='shift-jis')
+        # df_coef = pd.read_csv(f'./d_simulate_{d_simulate_conf.RUNDATE}{d_simulate_conf.suffix}/{str(self.code)}/df_coef.csv', index_col=0, encoding='shift-jis')
         # print('aa')
         # print(df_coef)
 

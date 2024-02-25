@@ -163,10 +163,9 @@ def aggregate_accumulation():
 
 def main():
     # codeリストを取得
-    df = pd.read_csv(f'./static_month_{d_simulate_conf.RUNDATE}/df_weekday_meta_up.csv', index_col=0, encoding='shift-jis')
-    # df = pd.read_csv(f'./simulate_{d_simulate_conf.RUNDATE}{d_simulate_conf.suffix}/df_acc_f.csv', index_col=0, encoding='shift-jis')
-    # df = pd.read_csv(f'./static_month_{d_simulate_conf.RUNDATE}{d_simulate_conf.suffix}/df_weekday_meta_up.csv', index_col=0, encoding='shift-jis')
-    # df = pd.read_csv(f'./static_month_{d_simulate_conf.RUNDATE}{d_simulate_conf.suffix}/df_weekday_meta.csv', index_col=0, encoding='shift-jis')
+    df = pd.read_csv(f'./d_reg_{d_simulate_conf.RUNDATE}/df_coef_up.csv', index_col=0, encoding='shift-jis')
+    # df = pd.read_csv(f'./static_month_{d_simulate_conf.RUNDATE}/df_weekday_meta_up.csv', index_col=0, encoding='shift-jis')
+    ###
     df['コード'] = df['コード'].astype(int)
     code_list = df['コード'].tolist()
     code_list = sorted(code_list)

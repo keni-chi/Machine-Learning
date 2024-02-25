@@ -6,7 +6,7 @@ import sys
 import pandas as pd
 from yahoo_finance_api2 import share
 from yahoo_finance_api2.exceptions import YahooFinanceError
-import simulate_conf
+import d_simulate_conf
 
 # コード
 data_j  = pd.read_csv('data_j_prime.csv', usecols=[0, 1], encoding='shift_jis')
@@ -14,11 +14,11 @@ print(data_j )
 target_no_list = data_j ['コード'].tolist()
 
 #2022-01-01以降の株価取得
-start='2023-12-01'
+# start='2023-12-01'
 end = dt.date.today()
 
 # フォルダ作成
-SAMPLE_DIR = f'data-yahoo-day-trade-{simulate_conf.RUNDATE}'
+SAMPLE_DIR = f'data-yahoo-day-trade-{d_simulate_conf.RUNDATE}'
 if not os.path.exists(SAMPLE_DIR):
     # ディレクトリが存在しない場合、ディレクトリを作成する
     os.makedirs(SAMPLE_DIR)
@@ -51,7 +51,7 @@ def get_stock_data():
                 'volume': 'Volume'
             })
             tmp = tmp.set_index('timestamp')
-            tmp.to_csv(f'./data-yahoo-day-trade-{simulate_conf.RUNDATE}/stock_'+ str(code) + '.csv')
+            tmp.to_csv(f'./data-yahoo-day-trade-{d_simulate_conf.RUNDATE}/stock_'+ str(code) + '.csv')
         except:
             print(f'---エラー:{str(code)}---')
 

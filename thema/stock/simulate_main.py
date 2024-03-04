@@ -109,8 +109,8 @@ def main():
     df['コード'] = df['コード'].astype(int)
     code_list = df['コード'].tolist()
 
-    # 計算実行
-    calc_run(code_list)
+    # # 計算実行
+    # calc_run(code_list)
 
     # 計算結果集約
     aggregate_simulation(code_list, df)

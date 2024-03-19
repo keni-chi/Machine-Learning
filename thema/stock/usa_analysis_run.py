@@ -8,7 +8,7 @@ import usa_simulate_main
 
 # データ取得
 print('---usa_get_stock_yahoo---')
-# usa_get_stock_yahoo.main()
+usa_get_stock_yahoo.main()
 # print('---get_stock_bs---')
 # get_stock_bs.main()
 
